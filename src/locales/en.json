@@ -1,0 +1,88 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "legislation": "Legislation",
+    "partners": "Partners",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Eurasian Consulting Consortium",
+    "subtitle": "Authorized representative in the Republic of Kazakhstan and EAEU member states",
+    "cta": "Contact us"
+  },
+  "about": {
+    "title": "About the company",
+    "description": "Eurasian Consulting Consortium LLP is a legal entity registered in the Republic of Kazakhstan acting as an authorized representative of foreign manufacturers.",
+    "missionTitle": "Our mission",
+    "mission": "To provide foreign manufacturers with reliable and lawful presence in the markets of Kazakhstan and the Eurasian Economic Union.",
+    "benefits": [
+      "Professional team of technical regulation experts",
+      "Practical experience with domestic and foreign manufacturers",
+      "End-to-end support from consultation to full project management",
+      "Efficiency, confidentiality and legal compliance"
+    ]
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "Comprehensive support for product conformity assessment",
+    "items": {
+      "authorized": {
+        "title": "Authorized representative",
+        "description": "Representation of foreign manufacturers in Kazakhstan and the EAEU"
+      },
+      "certification": {
+        "title": "EAEU TR certification",
+        "description": "Support for conformity assessment under technical regulations"
+      },
+      "declaration": {
+        "title": "Conformity declaration",
+        "description": "Preparation and registration of product conformity declarations"
+      },
+      "documentation": {
+        "title": "Technical documentation",
+        "description": "Development and adaptation of technical documentation for EAEU requirements"
+      },
+      "testing": {
+        "title": "Product testing",
+        "description": "Organization of testing in accredited laboratories"
+      },
+      "marking": {
+        "title": "EAC marking",
+        "description": "Consulting on EAC marking and product circulation rules"
+      }
+    }
+  },
+  "legislation": {
+    "title": "Legislation and useful information",
+    "description": "Up-to-date information on EAEU technical regulations, conformity assessment procedures and Kazakhstan legislation."
+  },
+  "partners": {
+    "title": "Partners",
+    "description": "We cooperate with conformity assessment bodies, accredited laboratories and professional associations."
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Get in touch for a consultation on your project",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send",
+      "success": "Message sent. We will contact you shortly.",
+      "errors": {
+        "nameRequired": "Name is required",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Invalid email",
+        "messageRequired": "Message is required"
+      }
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved"
+  },
+  "language": {
+    "label": "Language"
+  }
+}
