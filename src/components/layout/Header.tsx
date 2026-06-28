@@ -16,7 +16,7 @@ export function Header() {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-surface/95 backdrop-blur">
+    <header className="sticky top-0 z-50 bg-surface backdrop-blur-sm">
       {/* Основная шапка */}
       <div className="flex items-center justify-between border-b border-line px-5 py-4 sm:px-8 lg:px-14 lg:py-[18px] xl:px-20 2xl:px-28">
         <Link to="/" onClick={closeMenu} className="flex items-center gap-3.5">

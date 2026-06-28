@@ -7,7 +7,7 @@ export function CtaBand() {
   const { t } = useTranslation();
 
   return (
-    <div className="px-5 pb-12 sm:px-8 lg:px-14 lg:pb-15 xl:px-20 2xl:px-28">
+    <div className="bg-surface px-5 pb-12 sm:px-8 lg:px-14 lg:pb-15 xl:px-20 2xl:px-28">
       <div className="flex flex-col gap-6 rounded-[10px] bg-brand px-8 py-10 text-white sm:flex-row sm:items-center sm:justify-between lg:px-12 lg:py-12">
         <div>
           <h2 className="text-2xl font-extrabold sm:text-[26px]">

@@ -19,7 +19,7 @@ export function Section({ children, id, tint, bordered, className }: SectionProp
       id={id}
       className={cn(
         "px-5 py-12 sm:px-8 lg:px-14 lg:py-15 xl:px-20 2xl:px-28",
-        tint && "bg-brand-tint",
+        tint ? "bg-brand-tint" : "bg-surface",
         bordered && "border-t border-line",
         className,
       )}

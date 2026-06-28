@@ -9,7 +9,7 @@ type PageHeroProps = {
 /** Шапка внутренней страницы в стилистике эталонного hero. */
 export function PageHero({ eyebrow, title, lead }: PageHeroProps) {
   return (
-    <section className="border-b border-line px-5 py-12 sm:px-8 lg:px-14 lg:py-15 xl:px-20 2xl:px-28">
+    <section className="border-b border-line bg-surface px-5 py-12 sm:px-8 lg:px-14 lg:py-15 xl:px-20 2xl:px-28">
       <div className="animate-fade-in-up">
         <Eyebrow>{eyebrow}</Eyebrow>
         {title ? (

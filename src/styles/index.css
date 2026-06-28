@@ -65,6 +65,35 @@
   .animate-fade-in-up {
     animation: fade-in-up 0.6s ease-out both;
   }
+
+  /*
+    Кошкар-мүйіз: PNG-маска (без белого фона), заливка — изумруд бренда.
+  */
+  .site-shell {
+    isolation: isolate;
+  }
+
+  .site-ornament-layer {
+    z-index: 0;
+    background-color: var(--color-brand);
+    -webkit-mask-repeat: repeat;
+    mask-repeat: repeat;
+    -webkit-mask-size: 420px auto;
+    mask-size: 420px auto;
+    -webkit-mask-position: center;
+    mask-position: center;
+    opacity: 0.26;
+  }
+
+  .site-shell-content {
+    z-index: 1;
+  }
+
+  @media print {
+    .site-ornament-layer {
+      display: none;
+    }
+  }
 }
 
 @keyframes fade-in-up {

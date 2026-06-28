@@ -6,17 +6,15 @@
 /** Цифры в hero-карточке и в полосе статистики. Подписи — в i18n (home.stats.*). */
 export const STATS = [
   { value: "2007", labelKey: "home.stats.since" },
-  { value: "0", labelKey: "home.stats.claims" },
   { value: "4", labelKey: "home.stats.countries" },
   { value: "5", labelKey: "home.stats.eaeu" },
 ] as const;
 
-/** Бейджи в hero-карточке (2×2). Значение фиксировано, подпись — i18n. */
+/** Бейджи в hero-карточке. Значение фиксировано, подпись — i18n. */
 export const HERO_BADGES = [
   { value: "с 2007", labelKey: "home.badges.since" },
   { value: "ТР ЕАЭС", labelKey: "home.badges.assessment" },
   { value: "EAC", labelKey: "home.badges.marking" },
-  { value: "0", labelKey: "home.badges.claims" },
 ] as const;
 
 /** Услуги. Заголовок и описание — в i18n (services.items[]). Здесь только число направлений. */

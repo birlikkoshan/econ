@@ -45,7 +45,7 @@ export function HomePage() {
               className="h-28 w-28 rounded-full bg-white object-contain p-2 ring-1 ring-line-mint lg:h-[132px] lg:w-[132px]"
             />
             <div className="h-px w-full bg-line-mint" />
-            <div className="grid w-full grid-cols-2 gap-x-4 gap-y-[18px] text-center">
+            <div className="grid w-full grid-cols-1 gap-x-4 gap-y-[18px] text-center sm:grid-cols-3">
               {HERO_BADGES.map((badge) => (
                 <div key={badge.labelKey}>
                   <div className="text-[13px] font-extrabold text-ink">
@@ -62,7 +62,7 @@ export function HomePage() {
       </Section>
 
       {/* Полоса статистики */}
-      <div className="grid grid-cols-2 border-y border-line divide-line sm:grid-cols-4 sm:divide-x">
+      <div className="grid grid-cols-1 border-y border-line bg-surface divide-line sm:grid-cols-3 sm:divide-x">
         {STATS.map((stat) => (
           <div key={stat.labelKey} className="px-5 py-7 sm:px-8 lg:px-14 xl:px-20 2xl:px-28">
             <div className="text-3xl font-extrabold tracking-tight text-brand lg:text-[34px]">
