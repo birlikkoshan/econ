@@ -17,12 +17,6 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-surface/95 backdrop-blur">
-      {/* Утилити-полоса */}
-      <div className="hidden items-center justify-between border-b border-line px-14 py-2 text-xs text-muted-soft lg:flex xl:px-20 2xl:px-28">
-        <span>{t("site.name")}</span>
-        <LanguageSwitcher />
-      </div>
-
       {/* Основная шапка */}
       <div className="flex items-center justify-between border-b border-line px-5 py-4 sm:px-8 lg:px-14 lg:py-[18px] xl:px-20 2xl:px-28">
         <Link to="/" onClick={closeMenu} className="flex items-center gap-3.5">
@@ -31,13 +25,8 @@ export function Header() {
             alt={SITE.shortName}
             className="h-10 w-10 object-contain lg:h-[42px] lg:w-[42px]"
           />
-          <span className="leading-[1.25]">
-            <span className="block text-[15px] font-extrabold tracking-[0.02em] text-ink">
-              {t("site.brand")}
-            </span>
-            <span className="hidden text-[11px] tracking-[0.04em] text-muted-dim sm:block">
-              {t("header.tagline")}
-            </span>
+          <span className="text-[15px] font-extrabold leading-[1.25] tracking-[0.02em] text-ink">
+            {t("site.brand")}
           </span>
         </Link>
 
@@ -57,6 +46,7 @@ export function Header() {
               {t(item.labelKey)}
             </NavLink>
           ))}
+          <LanguageSwitcher className="text-sm" />
           <Button to="/contacts" className="px-[18px] py-2.5 text-sm">
             {t("common.cta")}
           </Button>

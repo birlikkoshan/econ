@@ -1,9 +1,10 @@
 import { useTranslation } from "react-i18next";
 
 import { CtaBand } from "@/components/ui/CtaBand";
+import { CompactListRow } from "@/components/ui/ListMarker";
 import { PageHero } from "@/components/ui/PageHero";
 import { Section } from "@/components/ui/Section";
-import { PARTNER_GROUPS } from "@/constants/content";
+import { PARTNERS } from "@/constants/content";
 
 /**
  * Названия компаний — имена собственные, но юридическую форму в казахской версии
@@ -28,28 +29,17 @@ export function PartnersPage() {
     <>
       <PageHero
         eyebrow={t("partners.eyebrow")}
-        title={t("partners.title")}
         lead={t("partners.lead")}
       />
 
       <Section>
-        <div className="grid gap-x-12 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
-          {PARTNER_GROUPS.map((group) => (
-            <div key={group.countryKey}>
-              <div className="mb-4 border-b-2 border-brand pb-3 text-[13px] font-extrabold uppercase tracking-[0.06em] text-ink">
-                {t(group.countryKey)}
-              </div>
-              <ul className="flex flex-col gap-3">
-                {group.items.map((item) => (
-                  <li
-                    key={item}
-                    className="text-[13.5px] leading-snug text-muted"
-                  >
-                    {localizePartner(item, i18n.language)}
-                  </li>
-                ))}
-              </ul>
-            </div>
+        <div className="grid gap-x-12 sm:grid-cols-2">
+          {PARTNERS.map((item) => (
+            <CompactListRow key={item}>
+              <p className="text-[15px] leading-snug text-ink-medium">
+                {localizePartner(item, i18n.language)}
+              </p>
+            </CompactListRow>
           ))}
         </div>
       </Section>

@@ -73,3 +73,17 @@ src/
 ## Деплой
 
 Vercel (`vercel.json`). Сборка — `npm run build`, артефакт — `dist/`.
+
+### Форма обратной связи
+
+Отправка писем — через serverless-функцию `api/contact.ts` (Gmail SMTP). В Vercel → **Settings → Environment Variables** добавьте:
+
+| Переменная | Значение |
+|------------|----------|
+| `SMTP_USER` | `econ2007kz@gmail.com` |
+| `SMTP_APP_PASSWORD` | пароль приложения Google (App passwords) |
+| `CONTACT_TO` | `econ2007kz@gmail.com` (необязательно) |
+
+Пароль приложения: Google Account → Security → 2-Step Verification → App passwords.
+
+Локально форму можно проверить через `npx vercel dev` (с теми же переменными в `.env`).

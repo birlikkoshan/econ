@@ -1,7 +1,7 @@
 {
   "site": {
     "name": "Eurasian Consulting Consortium LLP",
-    "brand": "Eurasian Consulting Consortium",
+    "brand": "Eurasian Consulting Consortium LLP",
     "address": "010000, Republic of Kazakhstan, Astana, Mangilik El 45-104",
     "addressShort": "Astana, Mangilik El 45-104",
     "director": "Tapalova Karakoz Tuzelovna",
@@ -21,9 +21,6 @@
     "legislation": "Legislation",
     "partners": "Partners",
     "contact": "Contacts"
-  },
-  "header": {
-    "tagline": "LLP · authorised representative of the manufacturer"
   },
   "home": {
     "eyebrow": "Republic of Kazakhstan · EAEU",
@@ -241,7 +238,13 @@
       "message": "Message",
       "messagePlaceholder": "Briefly describe your task: product type, country of manufacture, applicable EAEU technical regulations.",
       "submit": "Send request",
+      "submitting": "Sending…",
       "success": "Thank you! Your request has been sent — we will contact you shortly.",
+      "submitErrors": {
+        "default": "Could not send your request. Please try again later or e-mail econ2007kz@gmail.com.",
+        "mail_not_configured": "The form is temporarily unavailable. Please e-mail econ2007kz@gmail.com.",
+        "send_failed": "Could not send your request. Please try again later or e-mail econ2007kz@gmail.com."
+      },
       "errors": {
         "nameRequired": "Please enter your name",
         "emailRequired": "Please enter your e-mail",
@@ -260,6 +263,7 @@
     "legal": "Privacy Policy · Consent to Personal Data Processing"
   },
   "language": {
-    "label": "Language"
+    "label": "Language",
+    "script": "Script"
   }
 }

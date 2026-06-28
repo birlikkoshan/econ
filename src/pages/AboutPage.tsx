@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 
 import { CtaBand } from "@/components/ui/CtaBand";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { LeadListRow } from "@/components/ui/ListMarker";
 import { PageHero } from "@/components/ui/PageHero";
 import { Section } from "@/components/ui/Section";
 
@@ -57,17 +58,15 @@ export function AboutPage() {
         <Eyebrow>{t("about.directionsTitle")}</Eyebrow>
         <div className="mt-8 flex flex-col">
           {directions.map((item, index) => (
-            <div
+            <LeadListRow
               key={item}
-              className="grid grid-cols-[44px_1fr] items-start gap-6 border-t border-line-mint py-[22px] lg:grid-cols-[64px_1fr]"
+              isLast={index === directions.length - 1}
+              borderClass="border-line-mint"
             >
-              <div className="text-[22px] font-extrabold text-brand">
-                {String(index + 1).padStart(2, "0")}
-              </div>
               <p className="max-w-[72ch] text-base leading-relaxed text-ink-soft sm:text-[17px]">
                 {item}
               </p>
-            </div>
+            </LeadListRow>
           ))}
         </div>
       </Section>

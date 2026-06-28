@@ -76,6 +76,9 @@ export const PARTNER_GROUPS = [
   },
 ] as const;
 
+/** Все партнёры одним списком (без группировки по странам). */
+export const PARTNERS = PARTNER_GROUPS.flatMap((group) => group.items);
+
 /** Нормативные акты РК. Заголовок/описание — в i18n (legislation.laws[]). */
 export const LAWS = [
   { key: "techReg", url: "https://adilet.zan.kz/rus" },

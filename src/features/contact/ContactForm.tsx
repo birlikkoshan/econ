@@ -7,7 +7,8 @@ import { useContactForm } from "@/features/contact/useContactForm";
 
 export function ContactForm() {
   const { t } = useTranslation();
-  const { form, errors, sent, updateField, handleSubmit } = useContactForm();
+  const { form, errors, sent, submitting, submitError, updateField, handleSubmit } =
+    useContactForm();
 
   return (
     <div className="border border-line-soft bg-white p-7 lg:p-8">
@@ -52,9 +53,18 @@ export function ContactForm() {
           error={errors.message}
         />
 
-        <Button type="submit" block>
-          {t("contact.form.submit")}
+        <Button type="submit" block disabled={submitting}>
+          {submitting ? t("contact.form.submitting") : t("contact.form.submit")}
         </Button>
+
+        {submitError ? (
+          <p
+            className="rounded-[2px] bg-red-50 px-4 py-3 text-[14px] text-red-800"
+            role="alert"
+          >
+            {submitError}
+          </p>
+        ) : null}
 
         {sent ? (
           <p

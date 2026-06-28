@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 
 import { CtaBand } from "@/components/ui/CtaBand";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { CompactListRow } from "@/components/ui/ListMarker";
 import { PageHero } from "@/components/ui/PageHero";
 import { Section } from "@/components/ui/Section";
 import { SERVICE_CARD_KEYS } from "@/constants/content";
@@ -23,21 +24,15 @@ export function ServicesPage() {
 
       <Section>
         <div className="grid gap-x-12 sm:grid-cols-2">
-          {items.map((item, index) => (
-            <article
-              key={item.title}
-              className="grid grid-cols-[40px_1fr] gap-4 border-t border-line py-6"
-            >
-              <div className="text-[13px] font-bold text-brand">
-                {String(index + 1).padStart(2, "0")}
-              </div>
+          {items.map((item) => (
+            <CompactListRow key={item.title} className="py-6">
               <div>
                 <h3 className="text-base font-bold text-ink">{item.title}</h3>
                 <p className="mt-1.5 text-[14px] leading-relaxed text-muted">
                   {item.description}
                 </p>
               </div>
-            </article>
+            </CompactListRow>
           ))}
         </div>
       </Section>

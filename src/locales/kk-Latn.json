@@ -1,7 +1,7 @@
 {
   "site": {
     "name": "«Eūraziyalyq konsaltingtık konsortsiūm» JŞS",
-    "brand": "Eūraziyalyq konsaltingtık konsortsiūm",
+    "brand": "«Eūraziyalyq konsaltingtık konsortsiūm» JŞS",
     "address": "010000, Qazaqstan Respūblikasy, Astana q., Mäñgılık El 45-104",
     "addressShort": "Astana, Mäñgılık El 45-104",
     "director": "Tapalova Qaraqöz Tūzelovna",
@@ -21,9 +21,6 @@
     "legislation": "Zañnama",
     "partners": "Serıktester",
     "contact": "Bailanys"
-  },
-  "header": {
-    "tagline": "JŞS · daiyndaūşy ūäkılettık bergen tulğa"
   },
   "home": {
     "eyebrow": "Qazaqstan Respūblikasy · EAEO",
@@ -241,7 +238,13 @@
       "message": "Habarlama",
       "messagePlaceholder": "Mındetıñızdı qysqaşa sipattañyz: önım türı, daiyndaūşy elı, qoldanylatyn EAEO TR.",
       "submit": "Ötınım jıberū",
+      "submitting": "Jıberılude…",
       "success": "Raqmet! Ötınım jıberıldı — bız sızben jaqyn arada bailanysamyz.",
+      "submitErrors": {
+        "default": "Ötınım jıberılmedı. Keiınırek qaýtalap körıñız nemese econ2007kz@gmail.com poştasyna jazyñyz.",
+        "mail_not_configured": "Forma uaqytsha qoljetimsiz. Bızge econ2007kz@gmail.com poştasyna jazyñyz.",
+        "send_failed": "Ötınım jıberılmedı. Keiınırek qaýtalap körıñız nemese econ2007kz@gmail.com poštasyna jazyñyz."
+      },
       "errors": {
         "nameRequired": "Atyñyzdy körsetıñız",
         "emailRequired": "E-mail körsetıñız",
@@ -260,6 +263,7 @@
     "legal": "Qupiyalylyq sayasaty · Derbes derekterdı öñdeūge kelısım"
   },
   "language": {
-    "label": "Tıl"
+    "label": "Tıl",
+    "script": "Jazba"
   }
 }

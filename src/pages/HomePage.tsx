@@ -6,8 +6,9 @@ import { Button } from "@/components/ui/Button";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Section } from "@/components/ui/Section";
+import { CompactListRow, LeadListRow } from "@/components/ui/ListMarker";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { HERO_BADGES, PARTNER_GROUPS, STATS } from "@/constants/content";
+import { HERO_BADGES, STATS } from "@/constants/content";
 import { SITE } from "@/constants/site";
 
 export function HomePage() {
@@ -82,17 +83,11 @@ export function HomePage() {
         </h2>
         <div className="flex flex-col">
           {why.map((item, index) => (
-            <div
-              key={item}
-              className="grid grid-cols-[44px_1fr] items-start gap-6 border-t border-line py-[22px] lg:grid-cols-[64px_1fr]"
-            >
-              <div className="text-[22px] font-extrabold text-brand">
-                {String(index + 1).padStart(2, "0")}
-              </div>
+            <LeadListRow key={item} isLast={index === why.length - 1}>
               <p className="max-w-[70ch] text-base leading-relaxed text-ink-soft sm:text-[17px]">
                 {item}
               </p>
-            </div>
+            </LeadListRow>
           ))}
         </div>
       </Section>
@@ -113,43 +108,10 @@ export function HomePage() {
           className="mb-8"
         />
         <div className="grid gap-x-12 sm:grid-cols-2">
-          {services.map((item, index) => (
-            <div
-              key={item}
-              className="grid grid-cols-[40px_1fr] gap-4 border-t border-line-mint py-[18px]"
-            >
-              <div className="text-[13px] font-bold text-brand">
-                {String(index + 1).padStart(2, "0")}
-              </div>
+          {services.map((item) => (
+            <CompactListRow key={item} borderClass="border-line-mint">
               <p className="text-[15px] leading-snug text-ink-medium">{item}</p>
-            </div>
-          ))}
-        </div>
-      </Section>
-
-      {/* География */}
-      <Section>
-        <Eyebrow>{t("home.geo.eyebrow")}</Eyebrow>
-        <h2 className="mb-8 mt-3 text-2xl font-extrabold text-ink sm:text-[28px]">
-          {t("home.geo.title")}
-        </h2>
-        <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
-          {PARTNER_GROUPS.map((group) => (
-            <div key={group.countryKey}>
-              <div className="mb-3.5 border-b-2 border-brand pb-3 text-[13px] font-extrabold uppercase tracking-[0.06em] text-ink">
-                {t(group.countryKey)}
-              </div>
-              <div className="flex flex-col gap-2.5">
-                {group.items.slice(0, 3).map((item) => (
-                  <div
-                    key={item}
-                    className="text-[13.5px] leading-snug text-muted"
-                  >
-                    {item}
-                  </div>
-                ))}
-              </div>
-            </div>
+            </CompactListRow>
           ))}
         </div>
       </Section>
