@@ -1,0 +1,265 @@
+{
+  "site": {
+    "name": "«Eūraziyalyq konsaltingtık konsortsiūm» JŞS",
+    "brand": "Eūraziyalyq konsaltingtık konsortsiūm",
+    "address": "010000, Qazaqstan Respūblikasy, Astana q., Mäñgılık El 45-104",
+    "addressShort": "Astana, Mäñgılık El 45-104",
+    "director": "Tapalova Qaraqöz Tūzelovna",
+    "directorShort": "Tapalova Q. T."
+  },
+  "common": {
+    "cta": "Ötınım qaldyrū",
+    "contactUs": "Bızben bailanysū",
+    "allServices": "Barlyq qyzmetter →",
+    "ourServices": "Kompaniya qyzmetterı",
+    "readMore": "Tolyğyraq"
+  },
+  "nav": {
+    "home": "Basty bet",
+    "about": "Kompaniya tūraly",
+    "services": "Qyzmetter",
+    "legislation": "Zañnama",
+    "partners": "Serıktester",
+    "contact": "Bailanys"
+  },
+  "header": {
+    "tagline": "JŞS · daiyndaūşy ūäkılettık bergen tulğa"
+  },
+  "home": {
+    "eyebrow": "Qazaqstan Respūblikasy · EAEO",
+    "title": "Qazaqstan men EAEO-dağy şeteldık daiyndaūşynyñ senımdı ökılı",
+    "lead": "Şeteldık öndırūşılerdıñ müddesın memlekettık organdar men säikestıktı bağalaū organdary aldynda bıldıremız. Önımnıñ EAEO tehnikalyq reglamentterı talaptaryna säikestıgın rastaūdy keñes berūden jobany tolyq jürgızūge deiın süiemeldeimız.",
+    "primaryCta": "Kompaniya qyzmetterı",
+    "secondaryCta": "Bızben bailanysū",
+    "badges": {
+      "since": "naryqta jyl",
+      "assessment": "säikestıktı bağalaū",
+      "marking": "tañbalaū",
+      "claims": "narazylyq"
+    },
+    "stats": {
+      "since": "naryqta jyldan berı",
+      "claims": "bükıl tarihta narazylyq",
+      "countries": "serıktes el",
+      "eaeu": "EAEO memleketı"
+    },
+    "why": {
+      "eyebrow": "Artyqşylyqtar",
+      "title": "Bızdı nege tañdaidy",
+      "items": [
+        "Tehnikalyq retteū jäne säikestıktı bağalaū salasyndağy käsıbi sarapşylar toby.",
+        "Otandyq jäne şeteldık öndırūşılerdı süiemeldeūdegı praktikalyq täjıribe.",
+        "Keşendı täsıl — keñes berūden jobany tolyq süiemeldeūge deiın.",
+        "Är klientke jeke közqaras.",
+        "Jedeldık, qupiyalylyq jäne zañnama talaptaryn saqtaū."
+      ]
+    },
+    "services": {
+      "eyebrow": "Bız ne ısteimız",
+      "title": "Kompaniya qyzmetterı",
+      "items": [
+        "Şeteldık daiyndaūşylardyñ müddesın QR men EAEO-da bıldırū",
+        "Daiyndaūşy ūäkılettık bergen tulğa ökılettıgın resımdeū",
+        "Önımnıñ EAEO TR talaptaryna säikestıgın bağalaū",
+        "Säikestık deklaratsiyalary men sertifikattaryn süiemeldeū",
+        "Sertifikattaū organdarymen jäne zerthanalarmen özara ıs-qimyl",
+        "Tehnikalyq retteū jäne EAC tañbalaūy boiynşa keñes berū",
+        "Säikestık qujattamasyn saqtaū jäne usynū"
+      ]
+    },
+    "geo": {
+      "eyebrow": "Geografiya",
+      "title": "Bızge 4 eldıñ serıktesterı senedı"
+    },
+    "cta": {
+      "title": "Yntymaqtastyqqa şaqyramyz",
+      "text": "Eger sız şeteldık daiyndaūşy, jetkızūşı nemese önım importtaūşysy bolsañyz — Qazaqstan Respūblikasy men EAEO aūmağynda senımdı ökılıñız bolūğa daiynbyz.",
+      "button": "Ötınım qaldyrū"
+    }
+  },
+  "about": {
+    "eyebrow": "Kompaniya tūraly",
+    "title": "2007 jyldan berı daiyndaūşy ūäkılettık bergen tulğa",
+    "lead": "«Eūraziyalyq konsaltingtık konsortsiūm» JŞS zañdy tulğa retınde 2007 jylğy 26 qañtarda tırkelgen jäne tehnikalyq retteū, säikestıktı bağalaū men akkreditteū salasynda jumys ısteidı.",
+    "paragraphs": [
+      "Qurylğan sätten bastap «Eūraziyalyq konsaltingtık konsortsiūm» JŞS tehnikalyq retteū, säikestıktı bağalaū jäne akkreditteū salasynda kommertsiyalyq qyzmetpen ainalysady.",
+      "Kompaniya «Qazaqstandyq säikestıktı bağalaū organdary qaūymdastyğy» zañdy tulğalar bırlestıgınıñ quryltaişysy bolyp tabylady, bul Qazaqstan Respūblikasynyñ barlyq sertifikattaū organdarymen özara ıs-qimyl jasaūğa mümkındık beredı."
+    ],
+    "activitiesTitle": "Qyzmettıñ negızgı türlerı",
+    "activitiesSubtitle": "Jarğyğa säikes",
+    "activities": [
+      "Saūda-satyp alū qyzmetı",
+      "Kommertsiyalyq qyzmet",
+      "Syrtqy ekonomikalyq qyzmet"
+    ],
+    "directionsTitle": "Qyzmet bağyttary",
+    "directions": [
+      "Zerthanalar men säikestıktı rastaū organdaryn qurū kezınde keñes berū-ädıstemelık kömek, keiınnen akkreditteū kezınde süiemeldeū.",
+      "Önımnıñ ulttyq zañnama men Eūraziyalyq ekonomikalyq odaq talaptaryna säikestıgın rastaū kezınde keñes berū-ädıstemelık kömek.",
+      "Saūda-ekonomikalyq qyzmet."
+    ],
+    "recordTitle": "Mınsız bedel",
+    "record": "Qyzmet etken kezeñde «Eūraziyalyq konsaltingtık konsortsiūm» JŞS qazaqstandyq ta, şeteldık te kompaniyalarğa joğary käsıbi deñgeide qyzmet körsetıp, bırde-bır narazylyq almağan. Qazırgı ūaqytta kompaniya «Serıktester» bölımınde körsetılgen bırqatar kompaniyamen uzaq merzımdı kelısımşarttarğa ie."
+  },
+  "services": {
+    "eyebrow": "Bız ne ısteimız",
+    "title": "Kompaniya qyzmetterı",
+    "lead": "Qazaqstan Respūblikasy men Eūraziyalyq ekonomikalyq odaq zañnamasy talaptary şeñberınde önımnıñ säikestıgın rastaū boiynşa qyzmetterdıñ tolyq keşenın usynamyz.",
+    "items": [
+      {
+        "title": "Daiyndaūşylardyñ müddesın bıldırū",
+        "description": "Şeteldık daiyndaūşylardyñ müddesın Qazaqstan Respūblikasy men EAEO aūmağynda bıldırū."
+      },
+      {
+        "title": "Ūäkılettı tulğa ökılettıgı",
+        "description": "Daiyndaūşy ūäkılettık bergen tulğanyñ ökılettıgın resımdeū."
+      },
+      {
+        "title": "Säikestıktı bağalaū",
+        "description": "Önımnıñ EAEO tehnikalyq reglamentterı talaptaryna säikestıgın bağalaū jumystaryn uiymdastyrū."
+      },
+      {
+        "title": "Deklaratsiyalar men sertifikattar",
+        "description": "Säikestık deklaratsiyalary men sertifikattaryn alū räsımderın süiemeldeū."
+      },
+      {
+        "title": "Organdar men zerthanalar",
+        "description": "Akkredittelgen sertifikattaū organdarymen jäne synaq zerthanalarymen özara ıs-qimyl."
+      },
+      {
+        "title": "Keñes berū jäne tañbalaū",
+        "description": "Tehnikalyq retteū, önımdı tañbalaū jäne ony EAEO naryğynda ainalymğa şyğarū mäselelerı boiynşa keñes berū."
+      },
+      {
+        "title": "Qujattamany saqtaū",
+        "description": "Önımnıñ belgılengen talaptarğa säikestıgın rastaityn qujattamany saqtaū jäne usynū."
+      }
+    ],
+    "cardsTitle": "Negızgı bağyttar",
+    "cardsSubtitle": "Önımdı EAEO naryğyna şyğarūdyñ tolyq tsiklı",
+    "cards": {
+      "authorized": {
+        "title": "Ūäkılettı tulğa",
+        "description": "Şeteldık daiyndaūşyny Qazaqstan Respūblikasy men EAEO organdary aldynda bıldırū."
+      },
+      "certification": {
+        "title": "EAEO TR sertifikattaū",
+        "description": "EAEO tehnikalyq reglamentterıne säikestıktı rastaū räsımderın süiemeldeū."
+      },
+      "declaration": {
+        "title": "Säikestıktı deklaratsiyalaū",
+        "description": "Önımnıñ säikestık deklaratsiyalaryn daiyndaū jäne tırkeū."
+      },
+      "documentation": {
+        "title": "Tehnikalyq qujattama",
+        "description": "Tehnikalyq qujattamany EAEO talaptaryna beiımdeū jäne äzırleū."
+      },
+      "testing": {
+        "title": "Önımdı synaū",
+        "description": "Akkredittelgen zerthanalarda synaqtardy uiymdastyrū."
+      },
+      "marking": {
+        "title": "EAC tañbalaūy",
+        "description": "Önımdı tañbalaū jäne EAEO naryğynda ainalymğa şyğarū erejelerı boiynşa keñes berū."
+      }
+    }
+  },
+  "legislation": {
+    "eyebrow": "Paidaly aqparat",
+    "title": "Zañnama jäne tehnikalyq retteū",
+    "lead": "Qazaqstan Respūblikasynda tehnikalyq retteū, säikestıktı bağalaū, akkreditteū jäne ölşem bırlıgın qamtamasyz etū salasyndağy quqyqtyq retteū ulttyq zañnamağa, halyqaralyq şarttarğa jäne Eūraziyalyq ekonomikalyq odaq quqyğyna negızdelgen.",
+    "intro": "Retteūdıñ negızgı maqsaty — önım qaūıpsızdıgın qamtamasyz etū, azamattardyñ ömırı men densaūlyğyn, qorşağan ortany jäne mülıktı qorğaū, sondai-aq önımnıñ Qazaqstan Respūblikasy men EAEO müşe memleketterınıñ naryğynda erkın ainalymy üşın jağdai jasaū.",
+    "lawsTitle": "Negızgı normativtık quqyqtyq aktıler",
+    "laws": [
+      {
+        "title": "QR «Tehnikalyq retteū tūraly» Zañy",
+        "meta": "2020 jylğy 30 jeltoqsan № 396-VI QRZ",
+        "description": "Memlekettık tehnikalyq retteū jüiesınıñ quqyqtyq negızderın, önım men öndırıs protsesterıne qoiylatyn talaptardy, säikestıktı bağalaūdy, memlekettık baqylaū men qadağalaūdy belgıleidı. Daiyndaūşy ūäkılettık bergen tulğa uğymy men ökılettıgın bekıtedı."
+      },
+      {
+        "title": "QR «Ölşem bırlıgın qamtamasyz etū tūraly» Zañy",
+        "meta": "2000 jylğy 7 maūsym № 53-II",
+        "description": "Metrologiya salasyndağy qatynastardy retteidı, ölşem quraldaryna, salystyryp tekserūge, kalibrleūge jäne memlekettık metrologiyalyq baqylaūğa talaptar belgılep, ölşeū nätijelerınıñ durystyğyn qamtamasyz etedı."
+      },
+      {
+        "title": "QR «Säikestıktı bağalaū salasyndağy akkreditteū tūraly» Zañy",
+        "meta": "2008 jylğy 5 şılde № 61-IV",
+        "description": "Säikestıktı bağalaū organdaryn akkreditteū protsesınde tūyndaityn qatynastardy retteidı jäne ulttyq akkreditteū jüiesınıñ quqyqtyq, uiymdastyrūşylyq jäne ekonomikalyq negızderın aiqyndaidy."
+      }
+    ],
+    "adiletNote": "Zañdardyñ özektı nusqalaryn Qazaqstan Respūblikasynyñ normativtık quqyqtyq aktılerınıñ aqparattyq-quqyqtyq jüiesınen taba alasyz.",
+    "adiletLink": "adilet.zan.kz saityna ötū",
+    "eaeuTitle": "Eūraziyalyq ekonomikalyq odaq quqyğy",
+    "eaeuLead": "Ulttyq zañnamamen qatar mynalar qoldanylady:",
+    "eaeuItems": [
+      "Eūraziyalyq ekonomikalyq odaq tūraly şart;",
+      "Eūraziyalyq ekonomikalyq odaqtyñ tehnikalyq reglamentterı (EAEO TR);",
+      "Eūraziyalyq ekonomikalyq komissiyanyñ şeşımderı;",
+      "tehnikalyq reglamentter talaptarynyñ oryndalūyn qamtamasyz etetın memleketaralyq standarttar."
+    ],
+    "eaeuNote": "Eūraziyalyq ekonomikalyq odaqtyñ şarttyq-quqyqtyq bazasy tūraly aqparatty Eūraziyalyq ekonomikalyq komissiyanyñ resmi saitynan alūğa bolady.",
+    "eaeuLink": "eec.eaeunion.org saityn aşū"
+  },
+  "partners": {
+    "eyebrow": "Geografiya",
+    "title": "Bızge 4 eldıñ serıktesterı senedı",
+    "lead": "«Eūraziyalyq konsaltingtık konsortsiūm» JŞS AQŞ, Eūropalyq odaq, Kanada jäne Qazaqstan Respūblikasyndağy öndırūşılermen jäne säikestıktı bağalaū organdarymen uzaq merzımdı kelısımşarttarğa ie.",
+    "countries": {
+      "usa": "AQŞ",
+      "eu": "Eūropalyq odaq",
+      "canada": "Kanada",
+      "kz": "Qazaqstan"
+    }
+  },
+  "contact": {
+    "eyebrow": "Bailanys",
+    "title": "Bızben bailanysyñyz",
+    "lead": "Eger sız Qazaqstan Respūblikasy men EAEO aūmağynda senımdı ökılge müddelı bolsañyz — ötınım qaldyryñyz, bız sızben jaqyn arada bailanysamyz.",
+    "infoTitle": "Derektemeler men bailanys",
+    "labels": {
+      "address": "Mekenjai",
+      "phone": "Telefon",
+      "email": "E-mail",
+      "director": "Direktor",
+      "requisites": "Bank derektemelerı",
+      "bin": "BSN",
+      "iik": "JSK",
+      "bik": "BSK",
+      "bank": "Bank",
+      "hours": "Jumys rejimı"
+    },
+    "hours": "Ds–Jm, 09:00–18:00 (UTC+5)",
+    "form": {
+      "title": "Ötınım qaldyrū",
+      "subtitle": "Formany toltyryñyz — jumys künı ışınde jaūap beremız.",
+      "name": "Aty-jönı",
+      "namePlaceholder": "Atyñyz",
+      "company": "Kompaniya",
+      "companyPlaceholder": "Uiym ataūy",
+      "email": "E-mail",
+      "emailPlaceholder": "name@company.com",
+      "message": "Habarlama",
+      "messagePlaceholder": "Mındetıñızdı qysqaşa sipattañyz: önım türı, daiyndaūşy elı, qoldanylatyn EAEO TR.",
+      "submit": "Ötınım jıberū",
+      "success": "Raqmet! Ötınım jıberıldı — bız sızben jaqyn arada bailanysamyz.",
+      "errors": {
+        "nameRequired": "Atyñyzdy körsetıñız",
+        "emailRequired": "E-mail körsetıñız",
+        "emailInvalid": "Qate e-mail",
+        "messageRequired": "Habarlama jazyñyz"
+      }
+    }
+  },
+  "footer": {
+    "about": "Eūraziyalyq konsaltingtık konsortsiūm — Qazaqstan Respūblikasy men EAEO-dağy daiyndaūşy ūäkılettık bergen tulğa.",
+    "sections": "Bölımder",
+    "contacts": "Bailanys",
+    "requisites": "Derektemeler",
+    "directorLabel": "Direktor",
+    "rights": "© 2026 «Eūraziyalyq konsaltingtık konsortsiūm» JŞS",
+    "legal": "Qupiyalylyq sayasaty · Derbes derekterdı öñdeūge kelısım"
+  },
+  "language": {
+    "label": "Tıl"
+  }
+}

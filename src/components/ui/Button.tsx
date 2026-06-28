@@ -1,36 +1,71 @@
-import type { ButtonHTMLAttributes } from "react";
+import type { ReactNode } from "react";
+import { Link } from "react-router-dom";
 
 import { cn } from "@/lib/utils";
 
-type ButtonVariant = "primary" | "secondary" | "ghost";
+type ButtonVariant = "primary" | "outline" | "white";
 
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
-  variant?: ButtonVariant;
+const VARIANTS: Record<ButtonVariant, string> = {
+  primary: "bg-brand text-white hover:bg-brand-deep",
+  outline: "border border-ink/30 text-ink hover:border-ink hover:bg-ink/[0.03]",
+  white: "bg-white text-brand-deep hover:bg-white/90",
 };
 
-const variants: Record<ButtonVariant, string> = {
-  primary:
-    "bg-brand-500 text-surface-900 hover:bg-brand-400 focus-visible:ring-brand-500",
-  secondary:
-    "border border-slate-300 bg-white text-slate-800 hover:bg-slate-50 focus-visible:ring-slate-400",
-  ghost: "text-slate-700 hover:bg-slate-100 focus-visible:ring-slate-400",
+type ButtonProps = {
+  children: ReactNode;
+  variant?: ButtonVariant;
+  to?: string;
+  href?: string;
+  onClick?: () => void;
+  type?: "button" | "submit";
+  disabled?: boolean;
+  block?: boolean;
+  className?: string;
 };
 
 export function Button({
-  className,
+  children,
   variant = "primary",
+  to,
+  href,
+  onClick,
   type = "button",
-  ...props
+  disabled,
+  block,
+  className,
 }: ButtonProps) {
+  const classes = cn(
+    "inline-flex items-center justify-center rounded-[2px] px-6 py-[13px] text-[15px] font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-60",
+    VARIANTS[variant],
+    block && "w-full",
+    className,
+  );
+
+  if (to) {
+    return (
+      <Link to={to} onClick={onClick} className={classes}>
+        {children}
+      </Link>
+    );
+  }
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noreferrer"
+        onClick={onClick}
+        className={classes}
+      >
+        {children}
+      </a>
+    );
+  }
+
   return (
-    <button
-      type={type}
-      className={cn(
-        "inline-flex items-center justify-center rounded-lg px-6 py-3 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
-        variants[variant],
-        className,
-      )}
-      {...props}
-    />
+    <button type={type} onClick={onClick} disabled={disabled} className={classes}>
+      {children}
+    </button>
   );
 }

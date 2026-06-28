@@ -6,6 +6,7 @@ import type { ContactFormData, ContactFormErrors } from "@/types";
 
 const INITIAL_FORM: ContactFormData = {
   name: "",
+  company: "",
   email: "",
   message: "",
 };

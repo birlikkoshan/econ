@@ -1,77 +1,109 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Link, NavLink } from "react-router-dom";
 
+import logo from "@/assets/logo.png";
+import { Button } from "@/components/ui/Button";
 import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
-import { Container } from "@/components/ui/Container";
 import { NAV_ITEMS } from "@/constants/navigation";
 import { SITE } from "@/constants/site";
-import { cn, scrollToSection } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 
 export function Header() {
   const { t } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const handleNavClick = (id: string) => {
-    scrollToSection(id);
-    setMenuOpen(false);
-  };
+  const closeMenu = () => setMenuOpen(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur">
-      <Container className="flex h-16 items-center justify-between gap-4">
-        <button
-          type="button"
-          onClick={() => handleNavClick("home")}
-          className="text-left text-sm font-bold text-surface-900 sm:text-base"
-        >
-          {SITE.shortName}
-        </button>
+    <header className="sticky top-0 z-50 bg-surface/95 backdrop-blur">
+      {/* Утилити-полоса */}
+      <div className="hidden items-center justify-between border-b border-line px-14 py-2 text-xs text-muted-soft lg:flex xl:px-20 2xl:px-28">
+        <span>{t("site.name")}</span>
+        <LanguageSwitcher />
+      </div>
 
-        <nav className="hidden items-center gap-6 md:flex">
+      {/* Основная шапка */}
+      <div className="flex items-center justify-between border-b border-line px-5 py-4 sm:px-8 lg:px-14 lg:py-[18px] xl:px-20 2xl:px-28">
+        <Link to="/" onClick={closeMenu} className="flex items-center gap-3.5">
+          <img
+            src={logo}
+            alt={SITE.shortName}
+            className="h-10 w-10 object-contain lg:h-[42px] lg:w-[42px]"
+          />
+          <span className="leading-[1.25]">
+            <span className="block text-[15px] font-extrabold tracking-[0.02em] text-ink">
+              {t("site.brand")}
+            </span>
+            <span className="hidden text-[11px] tracking-[0.04em] text-muted-dim sm:block">
+              {t("header.tagline")}
+            </span>
+          </span>
+        </Link>
+
+        <nav className="hidden items-center gap-6 lg:flex">
           {NAV_ITEMS.map((item) => (
-            <button
+            <NavLink
               key={item.id}
-              type="button"
-              onClick={() => handleNavClick(item.id)}
-              className="text-sm font-medium text-slate-600 transition-colors hover:text-brand-600"
+              to={item.path}
+              end={item.path === "/"}
+              className={({ isActive }) =>
+                cn(
+                  "text-sm font-medium transition-colors hover:text-brand",
+                  isActive ? "text-brand" : "text-ink-soft",
+                )
+              }
             >
               {t(item.labelKey)}
-            </button>
+            </NavLink>
           ))}
+          <Button to="/contacts" className="px-[18px] py-2.5 text-sm">
+            {t("common.cta")}
+          </Button>
         </nav>
 
-        <div className="flex items-center gap-3">
-          <LanguageSwitcher />
-          <button
-            type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 md:hidden"
-            aria-expanded={menuOpen}
-            aria-label="Menu"
-            onClick={() => setMenuOpen((open) => !open)}
-          >
-            <span className="text-lg">{menuOpen ? "×" : "☰"}</span>
-          </button>
-        </div>
-      </Container>
+        <button
+          type="button"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-[2px] border border-line text-xl text-ink lg:hidden"
+          aria-expanded={menuOpen}
+          aria-label="Menu"
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          {menuOpen ? "×" : "☰"}
+        </button>
+      </div>
 
+      {/* Мобильное меню */}
       <div
         className={cn(
-          "border-t border-slate-200 bg-white md:hidden",
+          "border-b border-line bg-surface lg:hidden",
           menuOpen ? "block" : "hidden",
         )}
       >
-        <Container className="flex flex-col gap-1 py-3">
+        <nav className="flex flex-col px-5 py-3 sm:px-8">
           {NAV_ITEMS.map((item) => (
-            <button
+            <NavLink
               key={item.id}
-              type="button"
-              onClick={() => handleNavClick(item.id)}
-              className="rounded-lg px-3 py-2 text-left text-sm font-medium text-slate-700 hover:bg-slate-50"
+              to={item.path}
+              end={item.path === "/"}
+              onClick={closeMenu}
+              className={({ isActive }) =>
+                cn(
+                  "py-2.5 text-sm font-medium transition-colors",
+                  isActive ? "text-brand" : "text-ink-soft",
+                )
+              }
             >
               {t(item.labelKey)}
-            </button>
+            </NavLink>
           ))}
-        </Container>
+          <div className="flex items-center justify-between border-t border-line pt-4 mt-2">
+            <LanguageSwitcher />
+            <Button to="/contacts" onClick={closeMenu} className="px-[18px] py-2.5 text-sm">
+              {t("common.cta")}
+            </Button>
+          </div>
+        </nav>
       </div>
     </header>
   );

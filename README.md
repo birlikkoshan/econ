@@ -1,32 +1,75 @@
-# React + TypeScript + Vite
+# Евразийский консалтинговый консорциум (ECON)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Корпоративный сайт ТОО «Евразийский консалтинговый консорциум» — уполномоченного
+изготовителем лица в Республике Казахстан и государствах ЕАЭС.
 
-Currently, two official plugins are available:
+Сайт демонстрирует юридическую надёжность и экспертизу компании в области
+технического регулирования, оценки соответствия ТР ЕАЭС, декларирования,
+технической документации и маркировки EAC. Аудитория — B2B, в том числе
+иностранные производители.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Технический стек
 
-## React Compiler
+- **React 19** + **TypeScript** + **Vite 8**
+- **Tailwind CSS 4** (`@tailwindcss/vite`, токены в `src/styles/index.css`)
+- **react-router-dom 7** — маршрутизация
+- **react-i18next** — локализация: `ru` (по умолчанию), `en`, `kk`
+- **oxlint** — линтер
+- Шрифт **Manrope**, изумрудная палитра (oklch)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Команды
 
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install        # установка зависимостей
+npm run dev        # дев-сервер (Vite, http://localhost:5173)
+npm run build      # сборка (tsc -b && vite build) → dist/
+npm run preview    # предпросмотр прод-сборки
+npm run lint       # oxlint
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Структура
+
+```
+docs/
+  instruction.md          Главный ориентир по проекту (статус страниц, правила)
+  history.md              Журнал значимых изменений
+  markdown/               Источники контента (тексты берутся отсюда)
+  design/                 Эталон дизайна + скриншоты
+src/
+  app/                    App.tsx, router.tsx, провайдеры
+  pages/                  Страницы: Home, About, Services, Legislation, Partners, Contacts
+  components/
+    layout/               MainLayout (frame-card), Header, Footer
+    ui/                   Button, Section, Eyebrow, SectionHeading, PageHero, CtaBand, Input, Textarea, LanguageSwitcher
+  features/contact/       Форма обратной связи
+  constants/              navigation.ts, site.ts (реквизиты), content.ts (данные)
+  locales/                ru.json, en.json, kk.json
+  styles/                 index.css (Tailwind 4 + дизайн-токены эталона)
+  i18n/                   Инициализация react-i18next
+  lib/                    utils (cn), validation
+```
+
+## Страницы
+
+| Маршрут | Страница |
+|---------|----------|
+| `/` | Главная |
+| `/about` | О компании |
+| `/services` | Услуги |
+| `/legislation` | Законодательство и полезная информация |
+| `/partners` | Партнёры |
+| `/contacts` | Контакты |
+
+## Дизайн и контент
+
+- **Эталон стиля:** `docs/design/Вариант 1 - Изумруд (автономный).html`. Дизайн-токены
+  (изумрудная oklch-палитра, Manrope, отступы, радиусы) вынесены в
+  `src/styles/index.css` через Tailwind 4 `@theme`.
+- **Тексты:** только из `docs/markdown/*` — не выдумываются. Реквизиты — в
+  `src/constants/site.ts`.
+- **Локализация:** все страницы переведены на `ru`/`en`/`kk`; паритет ключей между
+  локалями обязателен.
+
+## Деплой
+
+Vercel (`vercel.json`). Сборка — `npm run build`, артефакт — `dist/`.

@@ -10,55 +10,61 @@ export function ContactForm() {
   const { form, errors, sent, updateField, handleSubmit } = useContactForm();
 
   return (
-    <form
-      className="mx-auto flex max-w-lg flex-col gap-4"
-      onSubmit={handleSubmit}
-      noValidate
-    >
-      <div>
-        <label htmlFor="contact-name" className="mb-1 block text-sm font-medium">
-          {t("contact.form.name")}
-        </label>
-        <Input
-          id="contact-name"
-          value={form.name}
-          onChange={(e) => updateField("name", e.target.value)}
-          error={errors.name}
-        />
-      </div>
+    <div className="border border-line-soft bg-white p-7 lg:p-8">
+      <h2 className="text-xl font-extrabold text-ink">{t("contact.form.title")}</h2>
+      <p className="mt-1.5 text-[14px] text-muted">{t("contact.form.subtitle")}</p>
 
-      <div>
-        <label htmlFor="contact-email" className="mb-1 block text-sm font-medium">
-          {t("contact.form.email")}
-        </label>
+      <form className="mt-6 flex flex-col gap-4" onSubmit={handleSubmit} noValidate>
+        <div className="grid gap-4 sm:grid-cols-2">
+          <Input
+            id="contact-name"
+            label={t("contact.form.name")}
+            placeholder={t("contact.form.namePlaceholder")}
+            value={form.name}
+            onChange={(e) => updateField("name", e.target.value)}
+            error={errors.name}
+          />
+          <Input
+            id="contact-company"
+            label={t("contact.form.company")}
+            placeholder={t("contact.form.companyPlaceholder")}
+            value={form.company}
+            onChange={(e) => updateField("company", e.target.value)}
+          />
+        </div>
+
         <Input
           id="contact-email"
           type="email"
+          label={t("contact.form.email")}
+          placeholder={t("contact.form.emailPlaceholder")}
           value={form.email}
           onChange={(e) => updateField("email", e.target.value)}
           error={errors.email}
         />
-      </div>
 
-      <div>
-        <label htmlFor="contact-message" className="mb-1 block text-sm font-medium">
-          {t("contact.form.message")}
-        </label>
         <Textarea
           id="contact-message"
+          label={t("contact.form.message")}
+          placeholder={t("contact.form.messagePlaceholder")}
           value={form.message}
           onChange={(e) => updateField("message", e.target.value)}
           error={errors.message}
         />
-      </div>
 
-      <Button type="submit">{t("contact.form.submit")}</Button>
+        <Button type="submit" block>
+          {t("contact.form.submit")}
+        </Button>
 
-      {sent ? (
-        <p className="text-sm font-medium text-green-600" role="status">
-          {t("contact.form.success")}
-        </p>
-      ) : null}
-    </form>
+        {sent ? (
+          <p
+            className="rounded-[2px] bg-brand-tint px-4 py-3 text-[14px] font-medium text-brand-deep"
+            role="status"
+          >
+            {t("contact.form.success")}
+          </p>
+        ) : null}
+      </form>
+    </div>
   );
 }
