@@ -17,6 +17,36 @@ export const HERO_BADGES = [
   { value: "EAC", labelKey: "home.badges.marking" },
 ] as const;
 
+/** Иконки для блока «Почему выбирают нас» (по порядку i18n home.why.items). */
+export const WHY_ICONS = [
+  "users",
+  "shield",
+  "layers",
+  "user-check",
+  "lock",
+] as const;
+
+/** Иконки для блока «Услуги компании» (по порядку i18n home.services.items). */
+export const HOME_SERVICE_ICONS = [
+  "handshake",
+  "stamp",
+  "clipboard-check",
+  "file-text",
+  "link",
+  "message",
+  "archive",
+] as const;
+
+/** Иконки для карточек-направлений на странице услуг (порядок SERVICE_CARD_KEYS). */
+export const SERVICE_CARD_ICONS = [
+  "user-check",
+  "badge",
+  "file-text",
+  "document",
+  "beaker",
+  "stamp",
+] as const;
+
 /** Услуги. Заголовок и описание — в i18n (services.items[]). Здесь только число направлений. */
 export const SERVICE_KEYS = [
   "representation",

@@ -1,7 +1,9 @@
 import { useTranslation } from "react-i18next";
 
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { Icon } from "@/components/ui/Icon";
 import { PageHero } from "@/components/ui/PageHero";
+import { Reveal } from "@/components/ui/Reveal";
 import { Section } from "@/components/ui/Section";
 import { EXTERNAL_LINKS, LAWS } from "@/constants/content";
 
@@ -33,15 +35,22 @@ export function LegislationPage() {
         </h2>
         <div className="flex flex-col gap-px overflow-hidden border border-line bg-line">
           {laws.map((law, index) => (
-            <article
+            <Reveal
               key={law.title}
+              as="article"
+              delay={index * 60}
               className="bg-surface p-7 lg:grid lg:grid-cols-[1fr_1.4fr] lg:gap-10"
             >
-              <div>
-                <h3 className="text-base font-extrabold text-ink">
-                  {law.title}
-                </h3>
-                <div className="mt-1.5 text-[13px] text-brand">{law.meta}</div>
+              <div className="flex gap-3.5">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[3px] bg-brand/10 text-brand">
+                  <Icon name="file-text" className="h-5 w-5" />
+                </span>
+                <div>
+                  <h3 className="text-base font-extrabold text-ink">
+                    {law.title}
+                  </h3>
+                  <div className="mt-1.5 text-[13px] text-brand">{law.meta}</div>
+                </div>
               </div>
               <p className="mt-3 text-[14px] leading-relaxed text-muted lg:mt-0">
                 {law.description}
@@ -49,12 +58,13 @@ export function LegislationPage() {
                   href={LAWS[index]?.url ?? EXTERNAL_LINKS.adilet}
                   target="_blank"
                   rel="noreferrer"
-                  className="ml-1 font-semibold text-brand-deep underline-offset-2 hover:underline"
+                  className="ml-1 inline-flex items-center gap-1 font-semibold text-brand-deep underline-offset-2 hover:underline"
                 >
+                  <Icon name="link" className="h-3.5 w-3.5" />
                   adilet.zan.kz
                 </a>
               </p>
-            </article>
+            </Reveal>
           ))}
         </div>
 

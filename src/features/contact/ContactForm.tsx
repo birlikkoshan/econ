@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 
 import { Button } from "@/components/ui/Button";
+import { Icon } from "@/components/ui/Icon";
 import { Input } from "@/components/ui/Input";
 import { Textarea } from "@/components/ui/Textarea";
 import { useContactForm } from "@/features/contact/useContactForm";
@@ -68,9 +69,12 @@ export function ContactForm() {
 
         {sent ? (
           <p
-            className="rounded-[2px] bg-brand-tint px-4 py-3 text-[14px] font-medium text-brand-deep"
+            className="flex animate-fade-in-up items-center gap-3 rounded-[2px] bg-brand-tint px-4 py-3 text-[14px] font-medium text-brand-deep"
             role="status"
           >
+            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand text-white">
+              <Icon name="user-check" className="h-4 w-4" />
+            </span>
             {t("contact.form.success")}
           </p>
         ) : null}

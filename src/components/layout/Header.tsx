@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, NavLink } from "react-router-dom";
 
@@ -12,13 +12,31 @@ import { cn } from "@/lib/utils";
 export function Header() {
   const { t } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const closeMenu = () => setMenuOpen(false);
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 bg-surface backdrop-blur-sm">
+    <header
+      className={cn(
+        "sticky top-0 z-50 bg-surface/95 backdrop-blur-sm transition-shadow duration-300",
+        scrolled && "shadow-[0_6px_20px_-12px_rgba(0,0,0,0.25)]",
+      )}
+    >
       {/* Основная шапка */}
-      <div className="flex items-center justify-between border-b border-line px-5 py-4 sm:px-8 lg:px-14 lg:py-[18px] xl:px-20 2xl:px-28">
+      <div
+        className={cn(
+          "flex items-center justify-between border-b border-line px-5 transition-[padding] duration-300 sm:px-8 lg:px-14 xl:px-20 2xl:px-28",
+          scrolled ? "py-3 lg:py-3" : "py-4 lg:py-[18px]",
+        )}
+      >
         <Link to="/" onClick={closeMenu} className="flex items-center gap-3.5">
           <img
             src={logo}
