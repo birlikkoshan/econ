@@ -64,9 +64,53 @@
         "Storage and provision of conformity documentation"
       ]
     },
+    "process": {
+      "eyebrow": "How we work",
+      "title": "From consultation to full project management",
+      "steps": [
+        {
+          "title": "Consultation and scoping",
+          "text": "We analyse the product and the applicable EAEU technical regulations and select the right conformity confirmation scheme."
+        },
+        {
+          "title": "Arranging authority",
+          "text": "We arrange the authorised representative status and prepare the required documentation package."
+        },
+        {
+          "title": "Conformity assessment and testing",
+          "text": "We organise testing in accredited laboratories and liaise with certification bodies."
+        },
+        {
+          "title": "Support and storage",
+          "text": "We obtain declarations and certificates of conformity, manage the project and store the conformity documentation."
+        }
+      ]
+    },
     "geo": {
       "eyebrow": "Geography",
-      "title": "Trusted by partners from 4 countries"
+      "title": "Our partners"
+    },
+    "faq": {
+      "eyebrow": "Q&A",
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "q": "Who is an authorised representative of the manufacturer?",
+          "a": "It is an entity registered in the EAEU that represents the interests of a foreign manufacturer before government authorities and conformity assessment bodies and is responsible for the product's compliance with EAEU technical regulations."
+        },
+        {
+          "q": "Which countries do you work with?",
+          "a": "We hold long-term contracts with manufacturers and conformity assessment bodies from the USA, the European Union, Canada and the Republic of Kazakhstan."
+        },
+        {
+          "q": "How long does conformity confirmation take?",
+          "a": "The timeline depends on the type of product, the applicable technical regulations and the chosen scheme. We provide exact timing after reviewing the task during the initial consultation."
+        },
+        {
+          "q": "What documents are needed to get started?",
+          "a": "To begin, the technical documentation for the product and details about the manufacturer are sufficient. We compile the full list individually after the consultation."
+        }
+      ]
     },
     "cta": {
       "title": "Let's work together",
@@ -199,7 +243,7 @@
   },
   "partners": {
     "eyebrow": "Partners",
-    "title": "Trusted by partners from 4 countries",
+    "title": "Our partners",
     "lead": "Eurasian Consulting Consortium LLP maintains long-term contracts with manufacturers and conformity assessment bodies in the USA, the European Union, Canada and the Republic of Kazakhstan.",
     "countries": {
       "usa": "USA",
@@ -211,7 +255,7 @@
   "contact": {
     "eyebrow": "Contacts",
     "title": "Get in touch",
-    "lead": "If you are looking for a reliable representative in the Republic of Kazakhstan and the EAEU, send us a request and we will get back to you shortly.",
+    "lead": "If you are looking for a reliable representative in the Republic of Kazakhstan and the EAEU, get in touch with us in any convenient way and we will get back to you shortly.",
     "infoTitle": "Details and contacts",
     "labels": {
       "address": "Address",

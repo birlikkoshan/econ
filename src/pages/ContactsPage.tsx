@@ -2,7 +2,6 @@ import { useTranslation } from "react-i18next";
 
 import { PageHero } from "@/components/ui/PageHero";
 import { Section } from "@/components/ui/Section";
-import { ContactForm } from "@/features/contact/ContactForm";
 import { REQUISITES, SITE } from "@/constants/site";
 
 export function ContactsPage() {
@@ -33,7 +32,7 @@ export function ContactsPage() {
       />
 
       <Section>
-        <div className="grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-13">
+        <div className="max-w-2xl">
           <div>
             <h2 className="text-xl font-extrabold text-ink">
               {t("contact.infoTitle")}
@@ -79,8 +78,6 @@ export function ContactsPage() {
               </div>
             </div>
           </div>
-
-          <ContactForm />
         </div>
       </Section>
     </>

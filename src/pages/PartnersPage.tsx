@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next";
 
-import { CtaBand } from "@/components/ui/CtaBand";
 import { PageHero } from "@/components/ui/PageHero";
 import { PartnerCarousel } from "@/components/ui/PartnerCarousel";
 import { Reveal } from "@/components/ui/Reveal";
@@ -47,8 +46,6 @@ export function PartnersPage() {
           ))}
         </div>
       </Section>
-
-      <CtaBand />
     </>
   );
 }

@@ -3,10 +3,13 @@
   которые не переводятся. Переводимые подписи берутся из i18n по ключам ниже.
 */
 
+import eatonLogo from "@/assets/partners/eaton.svg";
+import skodaLogo from "@/assets/partners/skoda.png";
+import wabtecLogo from "@/assets/partners/wabtec.svg";
+
 /** Цифры в hero-карточке и в полосе статистики. Подписи — в i18n (home.stats.*). */
 export const STATS = [
   { value: "2007", labelKey: "home.stats.since" },
-  { value: "4", labelKey: "home.stats.countries" },
   { value: "5", labelKey: "home.stats.eaeu" },
 ] as const;
 
@@ -27,6 +30,14 @@ export const HOME_SERVICE_ICONS = [
   "file-text",
   "link",
   "message",
+  "archive",
+] as const;
+
+/** Иконки для шагов блока «Как мы работаем» (по порядку i18n home.process.steps). */
+export const PROCESS_ICONS = [
+  "message",
+  "user-check",
+  "beaker",
   "archive",
 ] as const;
 
@@ -105,11 +116,16 @@ export const PARTNERS = PARTNER_GROUPS.flatMap((group) => group.items);
  * значение — URL/импорт картинки (SVG/PNG, прозрачный фон).
  * Пока пусто — карусель показывает плейсхолдер с инициалами.
  * Чтобы добавить логотип: положить файл в `src/assets/partners/`,
- * импортировать сверху и прописать здесь, например:
- *   import eaton from "@/assets/partners/eaton.svg";
- *   "Eaton Corporation": eaton,
+ * импортировать сверху и прописать здесь (ключ — точное название из PARTNERS).
+ * Для остальных компаний логотипы не найдены в открытом доступе —
+ * карусель показывает плейсхолдер с инициалами.
  */
-export const PARTNER_LOGOS: Record<string, string> = {};
+export const PARTNER_LOGOS: Record<string, string> = {
+  "Wabtec Components LLC": wabtecLogo,
+  "Eaton Corporation": eatonLogo,
+  "ŠKODA ELECTRIC a.s.": skodaLogo,
+  "Wabtec Faiveley Nordic AB": wabtecLogo,
+};
 
 /** Нормативные акты РК. Заголовок/описание — в i18n (legislation.laws[]). */
 export const LAWS = [

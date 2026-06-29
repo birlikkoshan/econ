@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next";
 
-import { CtaBand } from "@/components/ui/CtaBand";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { LeadListRow } from "@/components/ui/ListMarker";
 import { PageHero } from "@/components/ui/PageHero";
@@ -70,8 +69,6 @@ export function AboutPage() {
           ))}
         </div>
       </Section>
-
-      <CtaBand />
     </>
   );
 }

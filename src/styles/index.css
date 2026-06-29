@@ -129,8 +129,8 @@
     transform: translateX(0);
   }
   to {
-    /* Сдвиг на половину дорожки (дорожка = два одинаковых набора). */
-    transform: translateX(-50%);
+    /* Сдвиг ровно на один набор логотипов (дорожка состоит из нескольких). */
+    transform: translateX(var(--marquee-shift, -50%));
   }
 }
 

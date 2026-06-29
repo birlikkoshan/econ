@@ -1,16 +1,19 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
+import { Accordion } from "@/components/ui/Accordion";
 import { Button } from "@/components/ui/Button";
 import { Counter } from "@/components/ui/Counter";
-import { CtaBand } from "@/components/ui/CtaBand";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Icon, type IconName } from "@/components/ui/Icon";
+import { PartnerCarousel } from "@/components/ui/PartnerCarousel";
 import { Reveal } from "@/components/ui/Reveal";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import {
   HOME_SERVICE_ICONS,
+  PARTNERS,
+  PROCESS_ICONS,
   STATS,
   WHY_ICONS,
 } from "@/constants/content";
@@ -29,11 +32,19 @@ export function HomePage() {
 
   const why = t("home.why.items", { returnObjects: true }) as string[];
   const services = t("home.services.items", { returnObjects: true }) as string[];
+  const steps = t("home.process.steps", { returnObjects: true }) as {
+    title: string;
+    text: string;
+  }[];
+  const faq = t("home.faq.items", { returnObjects: true }) as {
+    q: string;
+    a: string;
+  }[];
 
   return (
     <>
       {/* Hero */}
-      <Section className="lg:py-[54px]">
+      <Section className="bg-surface lg:py-[54px]">
         <div className="animate-fade-in-up max-w-[54ch] lg:max-w-[64ch]">
           <Eyebrow>{t("home.eyebrow")}</Eyebrow>
           <h1 className="mt-4 text-3xl font-extrabold leading-[1.1] tracking-tight text-ink sm:text-4xl lg:text-[42px] lg:max-w-none">
@@ -54,7 +65,7 @@ export function HomePage() {
       </Section>
 
       {/* Полоса статистики */}
-      <div className="grid grid-cols-2 border-y border-line bg-surface divide-line sm:grid-cols-3 sm:divide-x">
+      <div className="grid grid-cols-2 border-y border-line bg-surface divide-line sm:divide-x">
         {STATS.map((stat, index) => {
           const parsed = parseStat(stat.value);
           return (
@@ -140,7 +151,64 @@ export function HomePage() {
         </div>
       </Section>
 
-      <CtaBand />
+      {/* Как мы работаем — нумерованные шаги */}
+      <Section>
+        <Reveal className="mb-8 max-w-[60ch]">
+          <Eyebrow>{t("home.process.eyebrow")}</Eyebrow>
+          <h2 className="mt-3 text-2xl font-extrabold tracking-tight text-ink sm:text-[28px]">
+            {t("home.process.title")}
+          </h2>
+        </Reveal>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {steps.map((step, index) => (
+            <Reveal
+              key={step.title}
+              delay={index * 80}
+              className="group relative flex flex-col gap-4 border border-line bg-surface p-7 transition-all hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-[0_8px_24px_-12px_rgba(0,0,0,0.18)]"
+            >
+              <div className="flex items-center justify-between">
+                <span className="flex h-11 w-11 items-center justify-center rounded-[3px] bg-brand/10 text-brand transition-colors group-hover:bg-brand group-hover:text-white">
+                  <Icon name={PROCESS_ICONS[index] as IconName} />
+                </span>
+                <span className="text-3xl font-extrabold leading-none tracking-tight text-brand/15">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+              </div>
+              <h3 className="text-base font-bold text-ink">{step.title}</h3>
+              <p className="text-[15px] leading-relaxed text-muted">
+                {step.text}
+              </p>
+            </Reveal>
+          ))}
+        </div>
+      </Section>
+
+      {/* Партнёры — бесконечная лента логотипов */}
+      <Section tint bordered>
+        <Reveal className="mb-8">
+          <h2 className="text-2xl font-extrabold tracking-tight text-ink sm:text-[28px]">
+            {t("home.geo.title")}
+          </h2>
+        </Reveal>
+        <Reveal>
+          <PartnerCarousel items={PARTNERS} />
+        </Reveal>
+      </Section>
+
+      {/* Частые вопросы — аккордеон */}
+      <Section>
+        <div className="mx-auto max-w-3xl">
+          <Reveal className="mb-8">
+            <Eyebrow>{t("home.faq.eyebrow")}</Eyebrow>
+            <h2 className="mt-3 text-2xl font-extrabold tracking-tight text-ink sm:text-[28px]">
+              {t("home.faq.title")}
+            </h2>
+          </Reveal>
+          <Reveal>
+            <Accordion items={faq} />
+          </Reveal>
+        </div>
+      </Section>
     </>
   );
 }

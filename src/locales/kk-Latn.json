@@ -64,9 +64,53 @@
         "Säikestık qujattamasyn saqtaū jäne usynū"
       ]
     },
+    "process": {
+      "eyebrow": "Bız qalai jumys ısteimız",
+      "title": "Keñes berūden jobany tolyq süiemeldeūge deiın",
+      "steps": [
+        {
+          "title": "Keñes berū jäne mındettı bağalaū",
+          "text": "Önımdı jäne qoldanylatyn EAEO tehnikalyq reglamentterın taldap, säikestıktı rastaūdyñ qolaily shemasyn tañdaimyz."
+        },
+        {
+          "title": "Ökılettıktı resımdeū",
+          "text": "Daiyndaūşy ūäkılettık bergen tulğa ökılettıgın resımdep, qajettı qujattama toptamasyn daiyndaimyz."
+        },
+        {
+          "title": "Säikestıktı bağalaū jäne synaqtar",
+          "text": "Akkredittelgen zerthanalarda synaqtar uiymdastyryp, sertifikattaū organdarymen özara ıs-qimyl jasaimyz."
+        },
+        {
+          "title": "Süiemeldeū jäne saqtaū",
+          "text": "Säikestık deklaratsiyalary men sertifikattaryn alamyz, jobany jürgızıp, säikestık qujattamasyn saqtaimyz."
+        }
+      ]
+    },
     "geo": {
       "eyebrow": "Geografiya",
-      "title": "Bızge 4 eldıñ serıktesterı senedı"
+      "title": "Bızdıñ serıktester"
+    },
+    "faq": {
+      "eyebrow": "Suraqtar men jaūaptar",
+      "title": "Jiı qoiylatyn suraqtar",
+      "items": [
+        {
+          "q": "Daiyndaūşy ūäkılettık bergen tulğa degen kım?",
+          "a": "Bul — şeteldık daiyndaūşynyñ müddesın memlekettık organdar men säikestıktı bağalaū organdary aldynda bıldıretın jäne önımnıñ EAEO TR talaptaryna säikestıgıne jaūap beretın EAEO-da tırkelgen tulğa."
+        },
+        {
+          "q": "Qai eldermen jumys ısteisızder?",
+          "a": "Bızde AQŞ, Eūropalyq odaq, Kanada jäne Qazaqstan Respūblikasynyñ öndırūşılerımen ärı säikestıktı bağalaū organdarymen uzaq merzımdı kelısımşarttar bar."
+        },
+        {
+          "q": "Säikestıktı rastaū qanşa ūaqyt alady?",
+          "a": "Merzım önım türıne, qoldanylatyn tehnikalyq reglamentterge jäne tañdalğan shemağa bailanysty. Naqty merzımdı alğaşqy keñes berū kezınde mındettı taldaūdan keiın aitamyz."
+        },
+        {
+          "q": "Bastaū üşın qandai qujattar qajet?",
+          "a": "Bastapqyda önımge arnalğan tehnikalyq qujattama men daiyndaūşy tūraly mälımetter jetkılıktı. Tolyq tızımdı keñesten keiın jeke qalyptastyramyz."
+        }
+      ]
     },
     "cta": {
       "title": "Yntymaqtastyqqa şaqyramyz",
@@ -199,7 +243,7 @@
   },
   "partners": {
     "eyebrow": "Serıktester",
-    "title": "Bızge 4 eldıñ serıktesterı senedı",
+    "title": "Bızdıñ serıktester",
     "lead": "«Eūraziyalyq konsaltingtık konsortsiūm» JŞS AQŞ, Eūropalyq odaq, Kanada jäne Qazaqstan Respūblikasyndağy öndırūşılermen jäne säikestıktı bağalaū organdarymen uzaq merzımdı kelısımşarttarğa ie.",
     "countries": {
       "usa": "AQŞ",
@@ -211,7 +255,7 @@
   "contact": {
     "eyebrow": "Bailanys",
     "title": "Bızben bailanysyñyz",
-    "lead": "Eger sız Qazaqstan Respūblikasy men EAEO aūmağynda senımdı ökılge müddelı bolsañyz — ötınım qaldyryñyz, bız sızben jaqyn arada bailanysamyz.",
+    "lead": "Eger sız Qazaqstan Respūblikasy men EAEO aūmağynda senımdı ökılge müddelı bolsañyz — bızben yñğaily täsılmen bailanysyñyz, bız sızge jaqyn arada jaūap beremız.",
     "infoTitle": "Derektemeler men bailanys",
     "labels": {
       "address": "Mekenjai",

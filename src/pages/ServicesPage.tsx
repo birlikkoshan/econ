@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next";
 
-import { CtaBand } from "@/components/ui/CtaBand";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Icon, type IconName } from "@/components/ui/Icon";
 import { PageHero } from "@/components/ui/PageHero";
@@ -74,8 +73,6 @@ export function ServicesPage() {
           ))}
         </div>
       </Section>
-
-      <CtaBand />
     </>
   );
 }
