@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 type SectionProps = {
   children: ReactNode;
   id?: string;
-  /** Светлая изумрудная подложка (как блок «Услуги» в эталоне). */
+  /** Чуть более плотная изумрудная подложка — для смыслового разделения соседних секций. */
   tint?: boolean;
   /** Верхняя разделительная линия. */
   bordered?: boolean;
@@ -19,7 +19,7 @@ export function Section({ children, id, tint, bordered, className }: SectionProp
       id={id}
       className={cn(
         "px-5 py-12 sm:px-8 lg:px-14 lg:py-15 xl:px-20 2xl:px-28",
-        tint ? "bg-brand-tint" : "bg-surface",
+        tint ? "bg-brand-tint/85" : "bg-brand-tint/65",
         bordered && "border-t border-line",
         className,
       )}

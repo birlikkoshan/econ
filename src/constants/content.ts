@@ -10,13 +10,6 @@ export const STATS = [
   { value: "5", labelKey: "home.stats.eaeu" },
 ] as const;
 
-/** Бейджи в hero-карточке. Значение фиксировано, подпись — i18n. */
-export const HERO_BADGES = [
-  { value: "с 2007", labelKey: "home.badges.since" },
-  { value: "ТР ЕАЭС", labelKey: "home.badges.assessment" },
-  { value: "EAC", labelKey: "home.badges.marking" },
-] as const;
-
 /** Иконки для блока «Почему выбирают нас» (по порядку i18n home.why.items). */
 export const WHY_ICONS = [
   "users",
@@ -28,8 +21,8 @@ export const WHY_ICONS = [
 
 /** Иконки для блока «Услуги компании» (по порядку i18n home.services.items). */
 export const HOME_SERVICE_ICONS = [
-  "handshake",
-  "stamp",
+  "globe",
+  "user-check",
   "clipboard-check",
   "file-text",
   "link",
@@ -106,6 +99,17 @@ export const PARTNER_GROUPS = [
 
 /** Все партнёры одним списком (без группировки по странам). */
 export const PARTNERS = PARTNER_GROUPS.flatMap((group) => group.items);
+
+/**
+ * Логотипы партнёров для карусели. Ключ — точное название из PARTNERS,
+ * значение — URL/импорт картинки (SVG/PNG, прозрачный фон).
+ * Пока пусто — карусель показывает плейсхолдер с инициалами.
+ * Чтобы добавить логотип: положить файл в `src/assets/partners/`,
+ * импортировать сверху и прописать здесь, например:
+ *   import eaton from "@/assets/partners/eaton.svg";
+ *   "Eaton Corporation": eaton,
+ */
+export const PARTNER_LOGOS: Record<string, string> = {};
 
 /** Нормативные акты РК. Заголовок/описание — в i18n (legislation.laws[]). */
 export const LAWS = [

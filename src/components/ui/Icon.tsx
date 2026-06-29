@@ -17,7 +17,8 @@ export type IconName =
   | "badge"
   | "beaker"
   | "file-text"
-  | "document";
+  | "document"
+  | "globe";
 
 type IconProps = {
   name: IconName;
@@ -99,6 +100,14 @@ const PATHS: Record<IconName, ReactElement> = {
     <>
       <path d="M7 3h7l5 5v13H7V3z" />
       <path d="M14 3v5h5" />
+    </>
+  ),
+  globe: (
+    <>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M3 12h18" />
+      <path d="M12 3c2.5 2.8 4 6 4 9s-1.5 6.2-4 9" />
+      <path d="M12 3c-2.5 2.8-4 6-4 9s1.5 6.2 4 9" />
     </>
   ),
 };

@@ -1,7 +1,7 @@
 import { Eyebrow } from "@/components/ui/Eyebrow";
 
 type PageHeroProps = {
-  eyebrow: string;
+  eyebrow?: string;
   title?: string;
   lead?: string;
 };
@@ -11,7 +11,7 @@ export function PageHero({ eyebrow, title, lead }: PageHeroProps) {
   return (
     <section className="border-b border-line bg-surface px-5 py-12 sm:px-8 lg:px-14 lg:py-15 xl:px-20 2xl:px-28">
       <div className="animate-fade-in-up">
-        <Eyebrow>{eyebrow}</Eyebrow>
+        {eyebrow ? <Eyebrow>{eyebrow}</Eyebrow> : null}
         {title ? (
           <h1 className="mt-4 max-w-[20ch] text-3xl font-extrabold leading-[1.1] tracking-tight text-ink sm:text-4xl lg:text-[42px]">
             {title}
