@@ -32,8 +32,8 @@ export function ContactsPage() {
       />
 
       <Section>
-        <div className="max-w-2xl">
-          <div>
+        <div className="grid gap-8 lg:grid-cols-[1fr_360px] lg:items-start lg:gap-12">
+          <div className="border border-line-soft bg-surface p-6 sm:p-8">
             <h2 className="text-xl font-extrabold text-ink">
               {t("contact.infoTitle")}
             </h2>
@@ -62,20 +62,20 @@ export function ContactsPage() {
                 </div>
               ))}
             </dl>
+          </div>
 
-            <div className="mt-7 border border-line-soft bg-brand-tint p-6">
-              <div className="text-[13px] font-bold uppercase tracking-[0.06em] text-ink">
-                {t("contact.labels.requisites")}
-              </div>
-              <div className="mt-3 text-[14px] leading-[1.8] text-ink-medium">
-                {t("contact.labels.bin")} {REQUISITES.bin}
-                <br />
-                {t("contact.labels.iik")} {REQUISITES.iik}
-                <br />
-                {t("contact.labels.bik")} {REQUISITES.bik}
-                <br />
-                {t("contact.labels.bank")}: {REQUISITES.bank}
-              </div>
+          <div className="border border-line-soft bg-brand-tint p-6 sm:p-8">
+            <div className="text-[13px] font-bold uppercase tracking-[0.06em] text-ink">
+              {t("contact.labels.requisites")}
+            </div>
+            <div className="mt-3 text-[14px] leading-[1.8] text-ink-medium">
+              {t("contact.labels.bin")} {REQUISITES.bin}
+              <br />
+              {t("contact.labels.iik")} {REQUISITES.iik}
+              <br />
+              {t("contact.labels.bik")} {REQUISITES.bik}
+              <br />
+              {t("contact.labels.bank")}: {REQUISITES.bank}
             </div>
           </div>
         </div>

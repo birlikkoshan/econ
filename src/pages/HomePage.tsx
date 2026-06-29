@@ -31,7 +31,9 @@ export function HomePage() {
   const { t } = useTranslation();
 
   const why = t("home.why.items", { returnObjects: true }) as string[];
-  const services = t("home.services.items", { returnObjects: true }) as string[];
+  const services = t("home.services.items", {
+    returnObjects: true,
+  }) as string[];
   const steps = t("home.process.steps", { returnObjects: true }) as {
     title: string;
     text: string;
@@ -57,7 +59,11 @@ export function HomePage() {
             <Button to="/services" className="w-full sm:w-auto">
               {t("home.primaryCta")}
             </Button>
-            <Button to="/contacts" variant="outline" className="w-full sm:w-auto">
+            <Button
+              to="/contacts"
+              variant="outline"
+              className="w-full sm:w-auto"
+            >
               {t("home.secondaryCta")}
             </Button>
           </div>
@@ -106,7 +112,9 @@ export function HomePage() {
               key={item}
               delay={index * 90}
               className={`group flex flex-col gap-4 border border-line bg-surface p-7 transition-all hover:-translate-y-0.5 hover:border-brand/40 hover:bg-brand-tint hover:shadow-[0_8px_24px_-12px_rgba(0,0,0,0.18)] ${
-                index === why.length - 1 && why.length % 2 !== 0 ? "sm:col-span-2" : ""
+                index === why.length - 1 && why.length % 2 !== 0
+                  ? "sm:col-span-2"
+                  : ""
               }`}
             >
               <span className="flex h-11 w-11 items-center justify-center rounded-[3px] bg-brand/10 text-brand transition-colors group-hover:bg-brand group-hover:text-white">
@@ -143,7 +151,10 @@ export function HomePage() {
               className="group flex items-start gap-4 border border-line-mint bg-white p-5 transition-all hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-[0_8px_24px_-12px_rgba(0,0,0,0.18)]"
             >
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[3px] bg-brand-tint text-brand transition-colors group-hover:bg-brand group-hover:text-white">
-                <Icon name={HOME_SERVICE_ICONS[index] as IconName} className="h-5 w-5" />
+                <Icon
+                  name={HOME_SERVICE_ICONS[index] as IconName}
+                  className="h-5 w-5"
+                />
               </span>
               <p className="text-[15px] leading-snug text-ink-medium">{item}</p>
             </Reveal>
@@ -196,7 +207,7 @@ export function HomePage() {
       </Section>
 
       {/* Частые вопросы — аккордеон */}
-      <Section>
+      {/*<Section>
         <div className="mx-auto max-w-3xl">
           <Reveal className="mb-8">
             <Eyebrow>{t("home.faq.eyebrow")}</Eyebrow>
@@ -208,7 +219,7 @@ export function HomePage() {
             <Accordion items={faq} />
           </Reveal>
         </div>
-      </Section>
+      </Section>*/}
     </>
   );
 }
