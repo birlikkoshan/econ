@@ -13,7 +13,7 @@ type AccordionProps = {
  */
 export function Accordion({ items }: AccordionProps) {
   return (
-    <div className="divide-y divide-line border-y border-line">
+    <div className="divide-y divide-brand/30 border-y-2 border-brand/50">
       {items.map((item) => (
         <details key={item.q} className="group">
           <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-5 text-left [&::-webkit-details-marker]:hidden">

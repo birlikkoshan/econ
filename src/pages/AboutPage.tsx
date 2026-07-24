@@ -33,7 +33,7 @@ export function AboutPage() {
             ))}
           </div>
 
-          <div className="h-fit border border-line-soft bg-brand-tint p-7">
+          <div className="h-fit border-2 border-brand/50 bg-brand-tint p-7">
             <Eyebrow>{t("about.activitiesTitle")}</Eyebrow>
             <div className="mt-1 text-[11px] text-muted-faint">
               {t("about.activitiesSubtitle")}
@@ -42,7 +42,7 @@ export function AboutPage() {
               {activities.map((item) => (
                 <li
                   key={item}
-                  className="flex gap-3 border-t border-line-mint py-3 text-[15px] text-ink-soft first:border-t-0 first:pt-0"
+                  className="flex gap-3 border-t border-brand/30 py-3 text-[15px] text-ink-soft first:border-t-0 first:pt-0"
                 >
                   <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />
                   {item}
@@ -60,7 +60,7 @@ export function AboutPage() {
             <LeadListRow
               key={item}
               isLast={index === directions.length - 1}
-              borderClass="border-line-mint"
+              borderClass="border-brand/30"
             >
               <p className="max-w-[72ch] text-base leading-relaxed text-ink-soft sm:text-[17px]">
                 {item}

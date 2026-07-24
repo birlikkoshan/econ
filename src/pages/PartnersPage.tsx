@@ -36,7 +36,7 @@ export function PartnersPage() {
         <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {PARTNERS.map((item, index) => (
             <Reveal key={item} delay={index * 40}>
-              <div className="flex h-full items-start gap-3 border border-line bg-surface p-4 transition-colors hover:border-brand/40">
+              <div className="flex h-full items-start gap-3 border-2 border-brand/50 bg-surface p-4 transition-colors hover:border-brand hover:bg-brand-tint">
                 <span className="mt-2 h-1.5 w-1.5 shrink-0 rotate-45 bg-brand" />
                 <p className="text-[14px] leading-snug text-ink-medium">
                   {localize(item)}

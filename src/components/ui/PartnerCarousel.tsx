@@ -13,7 +13,7 @@ function LogoTile({ logo, label }: { logo: string; label: string }) {
   return (
     <div
       title={label}
-      className="flex h-24 w-44 shrink-0 items-center justify-center border border-line bg-surface px-5 transition-colors hover:border-brand/40"
+      className="flex h-24 w-44 shrink-0 items-center justify-center border-2 border-brand/50 bg-surface px-5 transition-colors hover:border-brand hover:bg-brand-tint"
     >
       <img
         src={logo}

@@ -33,7 +33,7 @@ export function LegislationPage() {
         <h2 className="mb-7 mt-12 text-2xl font-extrabold text-ink sm:text-[28px]">
           {t("legislation.lawsTitle")}
         </h2>
-        <div className="flex flex-col gap-px overflow-hidden border border-line bg-line">
+        <div className="flex flex-col gap-px overflow-hidden border-2 border-brand/50 bg-brand/25">
           {laws.map((law, index) => (
             <Reveal
               key={law.title}
@@ -93,7 +93,7 @@ export function LegislationPage() {
           {eaeuItems.map((item) => (
             <li
               key={item}
-              className="flex gap-3 border-t border-line-mint py-3.5 text-[15px] text-ink-soft"
+              className="flex gap-3 border-t border-brand/30 py-3.5 text-[15px] text-ink-soft"
             >
               <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />
               {item}

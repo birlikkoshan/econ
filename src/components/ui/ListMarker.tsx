@@ -32,7 +32,7 @@ type LeadListRowProps = {
 /** Строка списка с ромбом и вертикальной «нитью» между пунктами. */
 export function LeadListRow({
   isLast,
-  borderClass = "border-line",
+  borderClass = "border-brand/30",
   children,
 }: LeadListRowProps) {
   return (
@@ -61,7 +61,7 @@ type CompactListRowProps = {
 
 /** Компактная строка для двухколоночных сеток услуг. */
 export function CompactListRow({
-  borderClass = "border-line",
+  borderClass = "border-brand/30",
   className,
   children,
 }: CompactListRowProps) {

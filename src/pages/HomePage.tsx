@@ -1,10 +1,10 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
-import { Accordion } from "@/components/ui/Accordion";
 import { Button } from "@/components/ui/Button";
 import { Counter } from "@/components/ui/Counter";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { HeroSphere } from "@/components/ui/HeroSphere";
 import { Icon, type IconName } from "@/components/ui/Icon";
 import { PartnerCarousel } from "@/components/ui/PartnerCarousel";
 import { Reveal } from "@/components/ui/Reveal";
@@ -38,40 +38,45 @@ export function HomePage() {
     title: string;
     text: string;
   }[];
-  const faq = t("home.faq.items", { returnObjects: true }) as {
-    q: string;
-    a: string;
-  }[];
-
   return (
     <>
       {/* Hero */}
-      <Section className="bg-surface lg:py-[54px]">
-        <div className="animate-fade-in-up max-w-[54ch] lg:max-w-[64ch]">
-          <Eyebrow>{t("home.eyebrow")}</Eyebrow>
-          <h1 className="mt-4 text-3xl font-extrabold leading-[1.1] tracking-tight text-ink sm:text-4xl lg:text-[42px] lg:max-w-none">
-            {t("home.title")}
-          </h1>
-          <p className="mt-5 text-base leading-relaxed text-muted">
-            {t("home.lead")}
-          </p>
-          <div className="mt-7 flex flex-col gap-3.5 sm:flex-row sm:flex-wrap">
-            <Button to="/services" className="w-full sm:w-auto">
-              {t("home.primaryCta")}
-            </Button>
-            <Button
-              to="/contacts"
-              variant="outline"
-              className="w-full sm:w-auto"
-            >
-              {t("home.secondaryCta")}
-            </Button>
+      <Section className="overflow-hidden bg-surface lg:py-[54px]">
+        <div className="relative flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-between lg:gap-14">
+          <div className="animate-fade-in-up w-full max-w-[54ch] lg:max-w-[64ch] lg:flex-[1.1] *:relative *:z-10">
+            <Eyebrow>{t("home.eyebrow")}</Eyebrow>
+            <h1 className="mt-4 text-3xl font-extrabold leading-[1.1] tracking-tight text-ink sm:text-4xl lg:text-[42px] lg:max-w-none">
+              {t("home.title")}
+            </h1>
+            <p className="mt-5 text-base leading-relaxed text-muted">
+              {t("home.lead")}
+            </p>
+            <div className="mt-7 flex flex-col gap-3.5 sm:flex-row sm:flex-wrap">
+              <Button to="/services" className="w-full sm:w-auto">
+                {t("home.primaryCta")}
+              </Button>
+              <Button
+                to="/contacts"
+                variant="outline"
+                className="w-full sm:w-auto"
+              >
+                {t("home.secondaryCta")}
+              </Button>
+            </div>
+          </div>
+          <div
+            className="animate-fade-in-up pointer-events-none absolute right-0 top-[30%] z-0 -mr-5 -translate-y-1/2 opacity-[0.58] sm:-mr-8 lg:relative lg:right-auto lg:top-auto lg:z-auto lg:mr-0 lg:flex lg:shrink-0 lg:translate-y-0 lg:justify-end lg:opacity-100"
+            style={{ animationDelay: "0.12s" }}
+          >
+            <div className="relative w-[min(36vw,140px)] overflow-hidden sm:w-[min(40vw,150px)] lg:w-[min(40vw,480px)] lg:overflow-visible xl:w-[520px]">
+              <HeroSphere className="max-w-none w-[min(72vw,280px)] sm:w-[min(70vw,300px)] lg:w-full" />
+            </div>
           </div>
         </div>
       </Section>
 
       {/* Полоса статистики */}
-      <div className="grid grid-cols-2 border-y border-line bg-surface divide-line sm:divide-x">
+      <div className="grid grid-cols-2 border-y-2 border-brand/50 bg-surface divide-brand/30 sm:divide-x">
         {STATS.map((stat, index) => {
           const parsed = parseStat(stat.value);
           return (
@@ -111,7 +116,7 @@ export function HomePage() {
             <Reveal
               key={item}
               delay={index * 90}
-              className={`group flex flex-col gap-4 border border-line bg-surface p-7 transition-all hover:-translate-y-0.5 hover:border-brand/40 hover:bg-brand-tint hover:shadow-[0_8px_24px_-12px_rgba(0,0,0,0.18)] ${
+              className={`group flex flex-col gap-4 border-2 border-brand/50 bg-surface p-7 transition-all hover:-translate-y-0.5 hover:border-brand hover:bg-brand-tint hover:shadow-[0_8px_24px_-12px_rgba(0,0,0,0.18)] ${
                 index === why.length - 1 && why.length % 2 !== 0
                   ? "sm:col-span-2"
                   : ""
@@ -148,7 +153,7 @@ export function HomePage() {
             <Reveal
               key={item}
               delay={index * 50}
-              className="group flex items-start gap-4 border border-line-mint bg-white p-5 transition-all hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-[0_8px_24px_-12px_rgba(0,0,0,0.18)]"
+              className="group flex items-start gap-4 border-2 border-brand/50 bg-white p-5 transition-all hover:-translate-y-0.5 hover:border-brand hover:bg-brand-tint hover:shadow-[0_8px_24px_-12px_rgba(0,0,0,0.18)]"
             >
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[3px] bg-brand-tint text-brand transition-colors group-hover:bg-brand group-hover:text-white">
                 <Icon
@@ -175,7 +180,7 @@ export function HomePage() {
             <Reveal
               key={step.title}
               delay={index * 80}
-              className="group relative flex flex-col gap-4 border border-line bg-surface p-7 transition-all hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-[0_8px_24px_-12px_rgba(0,0,0,0.18)]"
+              className="group relative flex flex-col gap-4 border-2 border-brand/50 bg-surface p-7 transition-all hover:-translate-y-0.5 hover:border-brand hover:bg-brand-tint hover:shadow-[0_8px_24px_-12px_rgba(0,0,0,0.18)]"
             >
               <div className="flex items-center justify-between">
                 <span className="flex h-11 w-11 items-center justify-center rounded-[3px] bg-brand/10 text-brand transition-colors group-hover:bg-brand group-hover:text-white">

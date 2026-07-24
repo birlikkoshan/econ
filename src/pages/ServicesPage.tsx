@@ -32,7 +32,7 @@ export function ServicesPage() {
             <Reveal
               key={item.title}
               delay={index * 50}
-              className="group flex items-start gap-4 border border-line bg-surface p-6 transition-all hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-[0_8px_24px_-12px_rgba(0,0,0,0.18)]"
+              className="group flex items-start gap-4 border-2 border-brand/50 bg-surface p-6 transition-all hover:-translate-y-0.5 hover:border-brand hover:bg-brand-tint hover:shadow-[0_8px_24px_-12px_rgba(0,0,0,0.18)]"
             >
               <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[3px] bg-brand-tint text-brand transition-colors group-hover:bg-brand group-hover:text-white">
                 <Icon name={HOME_SERVICE_ICONS[index] as IconName} />
@@ -58,7 +58,7 @@ export function ServicesPage() {
             <Reveal
               key={key}
               delay={index * 50}
-              className="group flex flex-col gap-3.5 border border-line-mint bg-white p-7 transition-all hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-[0_10px_28px_-14px_rgba(0,0,0,0.2)]"
+              className="group flex flex-col gap-3.5 border-2 border-brand/50 bg-white p-7 transition-all hover:-translate-y-0.5 hover:border-brand hover:bg-brand-tint hover:shadow-[0_10px_28px_-14px_rgba(0,0,0,0.2)]"
             >
               <span className="flex h-11 w-11 items-center justify-center rounded-[3px] bg-brand/10 text-brand transition-colors group-hover:bg-brand group-hover:text-white">
                 <Icon name={SERVICE_CARD_ICONS[index] as IconName} />

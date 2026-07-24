@@ -35,7 +35,7 @@ export function ContactsPage() {
       <Section>
         <div className="grid gap-8 lg:grid-cols-2 lg:items-start lg:gap-12">
           <div className="flex flex-col gap-8">
-            <div className="border border-line-soft bg-surface p-6 sm:p-8">
+            <div className="border-2 border-brand/50 bg-surface p-6 sm:p-8">
               <h2 className="text-xl font-extrabold text-ink">
                 {t("contact.infoTitle")}
               </h2>
@@ -44,7 +44,7 @@ export function ContactsPage() {
                 {infoRows.map((row) => (
                   <div
                     key={row.label}
-                    className="grid grid-cols-[120px_1fr] gap-4 border-t border-line py-4 first:border-t-0"
+                    className="grid grid-cols-[120px_1fr] gap-4 border-t border-brand/30 py-4 first:border-t-0"
                   >
                     <dt className="text-[13px] font-semibold uppercase tracking-[0.04em] text-muted-soft">
                       {row.label}
@@ -66,7 +66,7 @@ export function ContactsPage() {
               </dl>
             </div>
 
-            <div className="border border-line-soft bg-brand-tint p-6 sm:p-8">
+            <div className="border-2 border-brand/50 bg-brand-tint p-6 sm:p-8">
               <div className="text-[13px] font-bold uppercase tracking-[0.06em] text-ink">
                 {t("contact.labels.requisites")}
               </div>
