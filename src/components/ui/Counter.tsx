@@ -7,6 +7,8 @@ type CounterProps = {
   value: number;
   /** Префикс перед числом (например «с »). */
   prefix?: string;
+  /** Суффикс после числа (например «+»). */
+  suffix?: string;
   /** Длительность анимации, мс. */
   duration?: number;
   className?: string;
@@ -16,6 +18,7 @@ type CounterProps = {
 export function Counter({
   value,
   prefix = "",
+  suffix = "",
   duration = 1400,
   className,
 }: CounterProps) {
@@ -53,6 +56,7 @@ export function Counter({
     <span ref={ref} className={className}>
       {prefix}
       {display}
+      {suffix}
     </span>
   );
 }

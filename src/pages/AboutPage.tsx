@@ -4,6 +4,8 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import { LeadListRow } from "@/components/ui/ListMarker";
 import { PageHero } from "@/components/ui/PageHero";
 import { Section } from "@/components/ui/Section";
+import { SiteImage } from "@/components/ui/SiteImage";
+import { SITE_IMAGES } from "@/constants/content";
 
 export function AboutPage() {
   const { t } = useTranslation();
@@ -51,22 +53,45 @@ export function AboutPage() {
             </ul>
           </div>
         </div>
+
+        <div className="mt-12 grid gap-4 sm:grid-cols-2">
+          <SiteImage
+            src={SITE_IMAGES.office}
+            alt={t("images.office")}
+            className="aspect-[16/10]"
+          />
+          <SiteImage
+            src={SITE_IMAGES.teamMeeting}
+            alt={t("images.teamMeeting")}
+            delay={80}
+            className="aspect-[16/10]"
+          />
+        </div>
       </Section>
 
       <Section tint bordered>
-        <Eyebrow>{t("about.directionsTitle")}</Eyebrow>
-        <div className="mt-8 flex flex-col">
-          {directions.map((item, index) => (
-            <LeadListRow
-              key={item}
-              isLast={index === directions.length - 1}
-              borderClass="border-brand/30"
-            >
-              <p className="max-w-[72ch] text-base leading-relaxed text-ink-soft sm:text-[17px]">
-                {item}
-              </p>
-            </LeadListRow>
-          ))}
+        <div className="grid items-start gap-10 lg:grid-cols-[min(42%,480px)_1fr] lg:gap-14">
+          <SiteImage
+            src={SITE_IMAGES.industrial}
+            alt={t("images.industrial")}
+            className="aspect-[4/3]"
+          />
+          <div>
+            <Eyebrow>{t("about.directionsTitle")}</Eyebrow>
+            <div className="mt-8 flex flex-col">
+              {directions.map((item, index) => (
+                <LeadListRow
+                  key={item}
+                  isLast={index === directions.length - 1}
+                  borderClass="border-brand/30"
+                >
+                  <p className="max-w-[72ch] text-base leading-relaxed text-ink-soft sm:text-[17px]">
+                    {item}
+                  </p>
+                </LeadListRow>
+              ))}
+            </div>
+          </div>
         </div>
       </Section>
     </>

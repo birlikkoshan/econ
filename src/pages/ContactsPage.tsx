@@ -2,6 +2,8 @@ import { useTranslation } from "react-i18next";
 
 import { PageHero } from "@/components/ui/PageHero";
 import { Section } from "@/components/ui/Section";
+import { SiteImage } from "@/components/ui/SiteImage";
+import { SITE_IMAGES } from "@/constants/content";
 import { REQUISITES, SITE } from "@/constants/site";
 import { ContactForm } from "@/features/contact/ContactForm";
 
@@ -35,6 +37,11 @@ export function ContactsPage() {
       <Section>
         <div className="grid gap-8 lg:grid-cols-2 lg:items-start lg:gap-12">
           <div className="flex flex-col gap-8">
+            <SiteImage
+              src={SITE_IMAGES.office}
+              alt={t("images.office")}
+              className="aspect-[16/9]"
+            />
             <div className="border-2 border-brand/50 bg-surface p-6 sm:p-8">
               <h2 className="text-xl font-extrabold text-ink">
                 {t("contact.infoTitle")}

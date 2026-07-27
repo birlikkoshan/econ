@@ -10,21 +10,24 @@ import { PartnerCarousel } from "@/components/ui/PartnerCarousel";
 import { Reveal } from "@/components/ui/Reveal";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { SiteImage } from "@/components/ui/SiteImage";
 import {
   HOME_SERVICE_ICONS,
   PARTNERS,
   PROCESS_ICONS,
+  SITE_IMAGES,
   STATS,
   WHY_ICONS,
 } from "@/constants/content";
 
-/** Разбирает «2007» / «с 2007» на префикс и число для анимированного счётчика. */
+/** Разбирает «2007» / «18+» / «с 2007» на префикс, число и суффикс для анимированного счётчика. */
 function parseStat(value: string) {
   const match = value.match(/(\d+)/);
   if (!match) return null;
   const number = Number(match[1]);
   const prefix = value.slice(0, match.index ?? 0);
-  return { number, prefix };
+  const suffix = value.slice((match.index ?? 0) + match[1].length);
+  return { number, prefix, suffix };
 }
 
 export function HomePage() {
@@ -76,21 +79,22 @@ export function HomePage() {
       </Section>
 
       {/* Полоса статистики */}
-      <div className="grid grid-cols-2 border-y-2 border-brand/50 bg-surface divide-brand/30 sm:divide-x">
+      <div className="grid grid-cols-2 divide-y-2 divide-brand/30 border-y-2 border-brand/50 bg-surface sm:grid-cols-3 sm:divide-x sm:divide-y-0">
         {STATS.map((stat, index) => {
           const parsed = parseStat(stat.value);
           return (
-            <div
+            <Reveal
               key={stat.labelKey}
-              className={`px-5 py-7 sm:px-8 lg:px-14 xl:px-20 2xl:px-28 ${
-                index === STATS.length - 1 && STATS.length % 2 !== 0
-                  ? "col-span-2 sm:col-span-1"
-                  : ""
-              }`}
+              delay={index * 60}
+              className="px-5 py-7 sm:px-8 lg:px-10 xl:px-14"
             >
               <div className="text-3xl font-extrabold tracking-tight text-brand lg:text-[34px]">
                 {parsed ? (
-                  <Counter value={parsed.number} prefix={parsed.prefix} />
+                  <Counter
+                    value={parsed.number}
+                    prefix={parsed.prefix}
+                    suffix={parsed.suffix}
+                  />
                 ) : (
                   stat.value
                 )}
@@ -98,43 +102,76 @@ export function HomePage() {
               <div className="mt-1 text-[13px] text-muted-soft">
                 {t(stat.labelKey)}
               </div>
-            </div>
+            </Reveal>
           );
         })}
       </div>
 
-      {/* Почему выбирают нас */}
+      {/* О компании — фото и краткий текст */}
       <Section>
-        <Reveal className="mb-8">
-          <Eyebrow>{t("home.why.eyebrow")}</Eyebrow>
-          <h2 className="mt-3 text-2xl font-extrabold text-ink sm:text-[28px]">
-            {t("home.why.title")}
-          </h2>
-        </Reveal>
-        <div className="grid gap-4 sm:grid-cols-2">
-          {why.map((item, index) => (
-            <Reveal
-              key={item}
-              delay={index * 90}
-              className={`group flex flex-col gap-4 border-2 border-brand/50 bg-surface p-7 transition-all hover:-translate-y-0.5 hover:border-brand hover:bg-brand-tint hover:shadow-[0_8px_24px_-12px_rgba(0,0,0,0.18)] ${
-                index === why.length - 1 && why.length % 2 !== 0
-                  ? "sm:col-span-2"
-                  : ""
-              }`}
-            >
-              <span className="flex h-11 w-11 items-center justify-center rounded-[3px] bg-brand/10 text-brand transition-colors group-hover:bg-brand group-hover:text-white">
-                <Icon name={WHY_ICONS[index] as IconName} />
-              </span>
-              <p className="text-[15px] leading-relaxed text-ink-soft">
-                {item}
-              </p>
+        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
+          <SiteImage
+            src={SITE_IMAGES.teamMeeting}
+            alt={t("images.teamMeeting")}
+            className="aspect-[4/3] lg:aspect-[5/4]"
+          />
+          <Reveal>
+            <Eyebrow>{t("home.about.eyebrow")}</Eyebrow>
+            <h2 className="mt-3 text-2xl font-extrabold tracking-tight text-ink sm:text-[28px]">
+              {t("home.about.title")}
+            </h2>
+            <p className="mt-4 text-[15px] leading-relaxed text-ink-medium sm:text-base">
+              {t("home.about.text")}
+            </p>
+            <Button to="/about" variant="outline" className="mt-6">
+              {t("common.readMore")}
+            </Button>
+          </Reveal>
+        </div>
+      </Section>
+
+      {/* Почему выбирают нас */}
+      <Section tint bordered>
+        <div className="grid items-start gap-10 lg:grid-cols-[1fr_min(38%,420px)] lg:gap-14">
+          <div>
+            <Reveal className="mb-8">
+              <Eyebrow>{t("home.why.eyebrow")}</Eyebrow>
+              <h2 className="mt-3 text-2xl font-extrabold text-ink sm:text-[28px]">
+                {t("home.why.title")}
+              </h2>
             </Reveal>
-          ))}
+            <div className="grid gap-4 sm:grid-cols-2">
+              {why.map((item, index) => (
+                <Reveal
+                  key={item}
+                  delay={index * 90}
+                  className={`group flex flex-col gap-4 border-2 border-brand/50 bg-surface p-7 transition-all hover:-translate-y-0.5 hover:border-brand hover:bg-brand-tint hover:shadow-[0_8px_24px_-12px_rgba(0,0,0,0.18)] ${
+                    index === why.length - 1 && why.length % 2 !== 0
+                      ? "sm:col-span-2"
+                      : ""
+                  }`}
+                >
+                  <span className="flex h-11 w-11 items-center justify-center rounded-[3px] bg-brand/10 text-brand transition-colors group-hover:bg-brand group-hover:text-white">
+                    <Icon name={WHY_ICONS[index] as IconName} />
+                  </span>
+                  <p className="text-[15px] leading-relaxed text-ink-soft">
+                    {item}
+                  </p>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+          <SiteImage
+            src={SITE_IMAGES.handshake}
+            alt={t("images.handshake")}
+            delay={120}
+            className="hidden aspect-[4/5] lg:block"
+          />
         </div>
       </Section>
 
       {/* Услуги компании */}
-      <Section tint bordered>
+      <Section bordered>
         <SectionHeading
           eyebrow={t("home.services.eyebrow")}
           title={t("home.services.title")}

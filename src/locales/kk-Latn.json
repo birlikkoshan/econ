@@ -35,10 +35,19 @@
       "claims": "narazylyq"
     },
     "stats": {
+      "experience": "jyl täjıribe",
+      "projects": "oryndalğan joba",
+      "industries": "sala",
+      "clients": "klient",
       "since": "naryqta jyldan berı",
       "claims": "bükıl tarihta narazylyq",
       "countries": "serıktes el",
       "eaeu": "EAEO memleketı"
+    },
+    "about": {
+      "eyebrow": "Kompaniya turaly",
+      "title": "Täjıribemmen rastalğan saraqtama",
+      "text": "2007 jyldan berı bız şeteldık jäne qazaqstandyq öndırūşılerdı tehnikalyq retteū jäne säikestıktı bağalaū salasynda süiemeldeimız. Bızdıñ komanda ärtürli salalardagy käsıporandardymen jūmys isteıdı — önerkäsıptık jabyqtyqtan temırjol kölıgı komponentterıne deiın."
     },
     "why": {
       "eyebrow": "Artyqşylyqtar",
@@ -305,6 +314,12 @@
     "directorLabel": "Direktor",
     "rights": "© 2026 «Eūraziyalyq konsaltingtık konsortsiūm» JŞS",
     "legal": "Qupiyalylyq sayasaty · Derbes derekterdı öñdeūge kelısım"
+  },
+  "images": {
+    "teamMeeting": "Jūmys kezdesuındegı sarapşylar komandasy",
+    "office": "Kompaniyanyñ zamanaūy keñsesı",
+    "industrial": "Önerkäsıptık käsıporın — klientterdıñ qyzmet salasy",
+    "handshake": "Bıznes serıktestık jäne yntymaqtastyq"
   },
   "language": {
     "label": "Tıl",

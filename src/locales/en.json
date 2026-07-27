@@ -35,10 +35,19 @@
       "claims": "claims"
     },
     "stats": {
+      "experience": "years of experience",
+      "projects": "completed projects",
+      "industries": "industries",
+      "clients": "clients",
       "since": "on the market since",
       "claims": "claims in our entire history",
       "countries": "partner countries",
       "eaeu": "EAEU member states"
+    },
+    "about": {
+      "eyebrow": "About us",
+      "title": "Expertise backed by practice",
+      "text": "Since 2007, we have been supporting foreign and Kazakh manufacturers in technical regulation and conformity assessment. Our team works with enterprises across industries — from industrial equipment to railway transport components."
     },
     "why": {
       "eyebrow": "Advantages",
@@ -305,6 +314,12 @@
     "directorLabel": "Director",
     "rights": "© 2026 Eurasian Consulting Consortium LLP",
     "legal": "Privacy Policy · Consent to Personal Data Processing"
+  },
+  "images": {
+    "teamMeeting": "Team of experts in a working meeting",
+    "office": "Modern company office",
+    "industrial": "Industrial enterprise — client industry sector",
+    "handshake": "Business partnership and cooperation"
   },
   "language": {
     "label": "Language",

@@ -9,9 +9,28 @@ import wabtecLogo from "@/assets/partners/wabtec.svg";
 
 /** Цифры в hero-карточке и в полосе статистики. Подписи — в i18n (home.stats.*). */
 export const STATS = [
+  { value: "18+", labelKey: "home.stats.experience" },
+  { value: "500+", labelKey: "home.stats.projects" },
+  { value: "20+", labelKey: "home.stats.industries" },
+  { value: "100+", labelKey: "home.stats.clients" },
   { value: "2007", labelKey: "home.stats.since" },
   { value: "5", labelKey: "home.stats.eaeu" },
 ] as const;
+
+/**
+ * Фотографии для секций сайта (стоковые плейсхолдеры — заменить на реальные).
+ * alt-тексты — в i18n (images.*).
+ */
+export const SITE_IMAGES = {
+  teamMeeting:
+    "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=960&q=80&auto=format&fit=crop",
+  office:
+    "https://images.unsplash.com/photo-1497366216548-37526070297c?w=960&q=80&auto=format&fit=crop",
+  industrial:
+    "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=960&q=80&auto=format&fit=crop",
+  handshake:
+    "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=960&q=80&auto=format&fit=crop",
+} as const;
 
 /** Иконки для блока «Почему выбирают нас» (по порядку i18n home.why.items). */
 export const WHY_ICONS = [
