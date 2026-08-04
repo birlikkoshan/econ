@@ -4,7 +4,8 @@ import { PageHero } from "@/components/ui/PageHero";
 import { PartnerCarousel } from "@/components/ui/PartnerCarousel";
 import { Reveal } from "@/components/ui/Reveal";
 import { Section } from "@/components/ui/Section";
-import { PARTNERS } from "@/constants/content";
+import { SiteImage } from "@/components/ui/SiteImage";
+import { PARTNERS, SITE_IMAGES } from "@/constants/content";
 
 /**
  * Названия компаний — имена собственные, но юридическую форму в казахской версии
@@ -31,6 +32,11 @@ export function PartnersPage() {
       <PageHero title={t("partners.eyebrow")} lead={t("partners.lead")} />
 
       <Section>
+        <SiteImage
+          src={SITE_IMAGES.office}
+          alt={t("images.office")}
+          className="mb-10 aspect-[16/9]"
+        />
         <PartnerCarousel items={PARTNERS} localize={localize} />
 
         <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">

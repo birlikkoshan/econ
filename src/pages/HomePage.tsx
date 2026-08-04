@@ -132,7 +132,7 @@ export function HomePage() {
 
       {/* Почему выбирают нас */}
       <Section tint bordered>
-        <div className="grid items-start gap-10 lg:grid-cols-[1fr_min(38%,420px)] lg:gap-14">
+        <div className="grid gap-10 lg:grid-cols-[1fr_min(38%,420px)] lg:items-end lg:gap-14">
           <div>
             <Reveal className="mb-8">
               <Eyebrow>{t("home.why.eyebrow")}</Eyebrow>

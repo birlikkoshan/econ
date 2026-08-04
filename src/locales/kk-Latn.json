@@ -317,9 +317,10 @@
   },
   "images": {
     "teamMeeting": "Jūmys kezdesuındegı sarapşylar komandasy",
-    "office": "Kompaniyanyñ zamanaūy keñsesı",
-    "industrial": "Önerkäsıptık käsıporın — klientterdıñ qyzmet salasy",
-    "handshake": "Bıznes serıktestık jäne yntymaqtastyq"
+    "office": "Kompania qyzmetkerlerı zamanaūy keñsede",
+    "industrial": "Sarapşylardyñ klienttermen keñesūı",
+    "handshake": "Bıznes serıktestık jäne yntymaqtastyq",
+    "gavel": "Sudia balğasy — zañnamanyñ belgısı"
   },
   "language": {
     "label": "Tıl",

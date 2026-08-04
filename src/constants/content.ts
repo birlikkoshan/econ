@@ -31,13 +31,15 @@ export const STATS = [
  */
 export const SITE_IMAGES = {
   teamMeeting:
-    "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=960&q=80&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=960&q=80&auto=format&fit=crop",
   office:
-    "https://images.unsplash.com/photo-1497366216548-37526070297c?w=960&q=80&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1757405944970-dfca42373629?w=960&q=80&auto=format&fit=crop",
   industrial:
-    "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=960&q=80&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1573164574572-cb89e39749b4?w=960&q=80&auto=format&fit=crop",
   handshake:
-    "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=960&q=80&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1554200876-56c2f25224fa?w=960&q=80&auto=format&fit=crop",
+  gavel:
+    "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=960&q=80&auto=format&fit=crop",
 } as const;
 
 /** Иконки для блока «Почему выбирают нас» (по порядку i18n home.why.items). */

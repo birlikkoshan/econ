@@ -5,7 +5,8 @@ import { Icon } from "@/components/ui/Icon";
 import { PageHero } from "@/components/ui/PageHero";
 import { Reveal } from "@/components/ui/Reveal";
 import { Section } from "@/components/ui/Section";
-import { EXTERNAL_LINKS, LAWS } from "@/constants/content";
+import { SiteImage } from "@/components/ui/SiteImage";
+import { EXTERNAL_LINKS, LAWS, SITE_IMAGES } from "@/constants/content";
 
 type Law = { title: string; meta: string; description: string };
 
@@ -26,9 +27,16 @@ export function LegislationPage() {
       />
 
       <Section>
-        <p className="max-w-[80ch] text-[15px] leading-relaxed text-ink-medium sm:text-base">
-          {t("legislation.intro")}
-        </p>
+        <div className="grid gap-8 lg:grid-cols-[1fr_min(40%,440px)] lg:items-center lg:gap-12">
+          <p className="max-w-[80ch] text-[15px] leading-relaxed text-ink-medium sm:text-base">
+            {t("legislation.intro")}
+          </p>
+          <SiteImage
+            src={SITE_IMAGES.gavel}
+            alt={t("images.gavel")}
+            className="aspect-[16/10]"
+          />
+        </div>
 
         <h2 className="mb-7 mt-12 text-2xl font-extrabold text-ink sm:text-[28px]">
           {t("legislation.lawsTitle")}

@@ -2,10 +2,11 @@ import { useTranslation } from "react-i18next";
 
 import { PageHero } from "@/components/ui/PageHero";
 import { Section } from "@/components/ui/Section";
-import { SiteImage } from "@/components/ui/SiteImage";
-import { SITE_IMAGES } from "@/constants/content";
 import { REQUISITES, SITE } from "@/constants/site";
 import { ContactForm } from "@/features/contact/ContactForm";
+
+/** Set to true when contact form submission is ready. */
+const SHOW_CONTACT_FORM = false;
 
 export function ContactsPage() {
   const { t } = useTranslation();
@@ -26,6 +27,56 @@ export function ContactsPage() {
     { label: t("contact.labels.hours"), value: t("contact.hours") },
   ];
 
+  const contactsCard = (
+    <div className="border-2 border-brand/50 bg-surface p-6 sm:p-8">
+      <h2 className="text-xl font-extrabold text-ink">
+        {t("contact.infoTitle")}
+      </h2>
+
+      <dl className="mt-6 flex flex-col">
+        {infoRows.map((row) => (
+          <div
+            key={row.label}
+            className="grid grid-cols-[120px_1fr] gap-4 border-t border-brand/30 py-4 first:border-t-0"
+          >
+            <dt className="text-[13px] font-semibold uppercase tracking-[0.04em] text-muted-soft">
+              {row.label}
+            </dt>
+            <dd className="text-[15px] text-ink-soft">
+              {row.href ? (
+                <a
+                  href={row.href}
+                  className="text-brand-deep hover:underline"
+                >
+                  {row.value}
+                </a>
+              ) : (
+                row.value
+              )}
+            </dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  );
+
+  const requisitesCard = (
+    <div className="border-2 border-brand/50 bg-brand-tint p-6 sm:p-8">
+      <div className="text-[13px] font-bold uppercase tracking-[0.06em] text-ink">
+        {t("contact.labels.requisites")}
+      </div>
+      <div className="mt-3 text-[14px] leading-[1.8] text-ink-medium">
+        {t("contact.labels.bin")} {REQUISITES.bin}
+        <br />
+        {t("contact.labels.iik")} {REQUISITES.iik}
+        <br />
+        {t("contact.labels.bik")} {REQUISITES.bik}
+        <br />
+        {t("contact.labels.bank")}: {REQUISITES.bank}
+      </div>
+    </div>
+  );
+
   return (
     <>
       <PageHero
@@ -35,62 +86,20 @@ export function ContactsPage() {
       />
 
       <Section>
-        <div className="grid gap-8 lg:grid-cols-2 lg:items-start lg:gap-12">
-          <div className="flex flex-col gap-8">
-            <SiteImage
-              src={SITE_IMAGES.office}
-              alt={t("images.office")}
-              className="aspect-[16/9]"
-            />
-            <div className="border-2 border-brand/50 bg-surface p-6 sm:p-8">
-              <h2 className="text-xl font-extrabold text-ink">
-                {t("contact.infoTitle")}
-              </h2>
-
-              <dl className="mt-6 flex flex-col">
-                {infoRows.map((row) => (
-                  <div
-                    key={row.label}
-                    className="grid grid-cols-[120px_1fr] gap-4 border-t border-brand/30 py-4 first:border-t-0"
-                  >
-                    <dt className="text-[13px] font-semibold uppercase tracking-[0.04em] text-muted-soft">
-                      {row.label}
-                    </dt>
-                    <dd className="text-[15px] text-ink-soft">
-                      {row.href ? (
-                        <a
-                          href={row.href}
-                          className="text-brand-deep hover:underline"
-                        >
-                          {row.value}
-                        </a>
-                      ) : (
-                        row.value
-                      )}
-                    </dd>
-                  </div>
-                ))}
-              </dl>
+        {SHOW_CONTACT_FORM ? (
+          <div className="grid gap-8 lg:grid-cols-2 lg:items-start lg:gap-12">
+            <div className="flex flex-col gap-8">
+              {contactsCard}
+              {requisitesCard}
             </div>
-
-            <div className="border-2 border-brand/50 bg-brand-tint p-6 sm:p-8">
-              <div className="text-[13px] font-bold uppercase tracking-[0.06em] text-ink">
-                {t("contact.labels.requisites")}
-              </div>
-              <div className="mt-3 text-[14px] leading-[1.8] text-ink-medium">
-                {t("contact.labels.bin")} {REQUISITES.bin}
-                <br />
-                {t("contact.labels.iik")} {REQUISITES.iik}
-                <br />
-                {t("contact.labels.bik")} {REQUISITES.bik}
-                <br />
-                {t("contact.labels.bank")}: {REQUISITES.bank}
-              </div>
-            </div>
+            <ContactForm />
           </div>
-
-          <ContactForm />
-        </div>
+        ) : (
+          <div className="grid gap-8 lg:grid-cols-2 lg:items-stretch lg:gap-8">
+            {contactsCard}
+            {requisitesCard}
+          </div>
+        )}
       </Section>
     </>
   );

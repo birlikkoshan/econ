@@ -317,9 +317,10 @@
   },
   "images": {
     "teamMeeting": "Team of experts in a working meeting",
-    "office": "Modern company office",
-    "industrial": "Industrial enterprise — client industry sector",
-    "handshake": "Business partnership and cooperation"
+    "office": "Company team in a modern office",
+    "industrial": "Expert consultations with clients",
+    "handshake": "Business partnership and cooperation",
+    "gavel": "Judge's gavel — a symbol of legislation"
   },
   "language": {
     "label": "Language",
