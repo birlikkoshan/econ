@@ -3,8 +3,16 @@
   которые не переводятся. Переводимые подписи берутся из i18n по ключам ниже.
 */
 
+import arrrLogo from "@/assets/partners/arrr.png";
+import beclawatLogo from "@/assets/partners/beclawat.png";
+import bonatransLogo from "@/assets/partners/bonatrans.png";
 import eatonLogo from "@/assets/partners/eaton.svg";
+import gzoLogo from "@/assets/partners/gzo.png";
+import kazcszhtLogo from "@/assets/partners/kazcszht.png";
+import kazexpoauditLogo from "@/assets/partners/kazexpoaudit.png";
+import prelcoLogo from "@/assets/partners/prelco.png";
 import skodaLogo from "@/assets/partners/skoda.png";
+import teksLogo from "@/assets/partners/teks.png";
 import wabtecLogo from "@/assets/partners/wabtec.svg";
 
 /** Цифры в hero-карточке и в полосе статистики. Подписи — в i18n (home.stats.*). */
@@ -143,7 +151,15 @@ export const PARTNER_LOGOS: Record<string, string> = {
   "Wabtec Components LLC": wabtecLogo,
   "Eaton Corporation": eatonLogo,
   "ŠKODA ELECTRIC a.s.": skodaLogo,
+  "BONATRANS GROUP a.s.": bonatransLogo,
   "Wabtec Faiveley Nordic AB": wabtecLogo,
+  "PRELCO INC": prelcoLogo,
+  "Beclawat Manufacturing Inc.": beclawatLogo,
+  "ТОО «Казахстанский центр сертификации на железнодорожном транспорте»": kazcszhtLogo,
+  "ТОО «Казэкспоаудит»": kazexpoauditLogo,
+  "ТОО «ТЕКС»": teksLogo,
+  "ТОО «ҒЗО Алматы-Стандарт»": gzoLogo,
+  "ОЮЛ «Казахстанская ассоциация органов по оценке соответствия»": arrrLogo,
 };
 
 /** Нормативные акты РК. Заголовок/описание — в i18n (legislation.laws[]). */
