@@ -1,15 +1,14 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import nodemailer from "nodemailer";
 
+import { CONTACT_EMAIL, EMAIL_PATTERN } from "../shared/constants";
+
 type ContactPayload = {
   name?: string;
   company?: string;
   email?: string;
   message?: string;
 };
-
-const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const DEFAULT_RECIPIENT = "econ2007kz@gmail.com";
 
 function validatePayload(body: ContactPayload): string | null {
   if (!body.name?.trim()) return "name";
@@ -46,7 +45,7 @@ export default async function handler(
   const company = body.company?.trim() ?? "";
   const email = body.email!.trim();
   const message = body.message!.trim();
-  const recipient = process.env.CONTACT_TO ?? DEFAULT_RECIPIENT;
+  const recipient = process.env.CONTACT_TO ?? CONTACT_EMAIL;
 
   const transporter = nodemailer.createTransport({
     service: "gmail",

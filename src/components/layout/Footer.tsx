@@ -2,7 +2,8 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 import { NAV_ITEMS } from "@/constants/navigation";
-import { REQUISITES, SITE } from "@/constants/site";
+import { RequisitesBlock } from "@/components/ui/RequisitesBlock";
+import { SITE } from "@/constants/site";
 
 export function Footer() {
   const { t } = useTranslation();
@@ -58,15 +59,7 @@ export function Footer() {
           <div className="mb-3.5 text-xs font-bold uppercase tracking-[0.08em] text-white">
             {t("footer.requisites")}
           </div>
-          <div className="text-[12.5px] leading-[1.7] text-fog-soft">
-            {t("contact.labels.bin")} {REQUISITES.bin}
-            <br />
-            {t("contact.labels.iik")} {REQUISITES.iik}
-            <br />
-            {t("contact.labels.bik")} {REQUISITES.bik} · {REQUISITES.bank}
-            <br />
-            {t("footer.directorLabel")}: {t("site.directorShort")}
-          </div>
+          <RequisitesBlock variant="footer" />
         </div>
       </div>
 

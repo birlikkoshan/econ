@@ -5,8 +5,17 @@ import {
   ContactSubmitError,
   submitContactForm,
 } from "@/features/contact/submitContactForm";
+import { SITE } from "@/constants/site";
 import { validateContactForm } from "@/lib/validation";
 import type { ContactFormData, ContactFormErrors } from "@/types";
+
+const SERVER_ERROR_MAP: Record<string, string> = {
+  name: "contact.form.errors.nameRequired",
+  email: "contact.form.errors.emailRequired",
+  emailInvalid: "contact.form.errors.emailInvalid",
+  message: "contact.form.errors.messageRequired",
+  method_not_allowed: "contact.form.submitErrors.default",
+};
 
 const INITIAL_FORM: ContactFormData = {
   name: "",
@@ -56,14 +65,18 @@ export function useContactForm() {
       try {
         await submitContactForm(form);
         setSent(true);
-        setForm(INITIAL_FORM);
+        setForm({ ...INITIAL_FORM });
       } catch (error) {
         const code =
           error instanceof ContactSubmitError ? error.code : "send_failed";
-        const messageKey = `contact.form.submitErrors.${code}`;
+        const messageKey =
+          SERVER_ERROR_MAP[code] ?? `contact.form.submitErrors.${code}`;
         setSubmitError(
           t(messageKey, {
-            defaultValue: t("contact.form.submitErrors.default"),
+            email: SITE.email,
+            defaultValue: t("contact.form.submitErrors.default", {
+              email: SITE.email,
+            }),
           }),
         );
       } finally {

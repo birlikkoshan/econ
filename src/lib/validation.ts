@@ -1,6 +1,5 @@
 import type { ContactFormData, ContactFormErrors } from "@/types";
-
-const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+import { EMAIL_PATTERN } from "../../shared/constants";
 
 export function validateContactForm(
   data: ContactFormData,

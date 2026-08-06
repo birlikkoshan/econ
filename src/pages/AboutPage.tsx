@@ -23,7 +23,7 @@ export function AboutPage() {
       />
 
       <Section>
-        <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr] lg:gap-13">
+        <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr] lg:gap-12">
           <div className="space-y-5">
             {paragraphs.map((p) => (
               <p

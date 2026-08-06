@@ -1,12 +1,13 @@
 import { useTranslation } from "react-i18next";
 
 import { PageHero } from "@/components/ui/PageHero";
+import { RequisitesBlock } from "@/components/ui/RequisitesBlock";
 import { Section } from "@/components/ui/Section";
-import { REQUISITES, SITE } from "@/constants/site";
+import { SITE } from "@/constants/site";
 import { ContactForm } from "@/features/contact/ContactForm";
 
-/** Set to true when contact form submission is ready. */
-const SHOW_CONTACT_FORM = false;
+const showContactForm =
+  import.meta.env.VITE_ENABLE_CONTACT_FORM === "true";
 
 export function ContactsPage() {
   const { t } = useTranslation();
@@ -60,23 +61,6 @@ export function ContactsPage() {
     </div>
   );
 
-  const requisitesCard = (
-    <div className="border-2 border-brand/50 bg-brand-tint p-6 sm:p-8">
-      <div className="text-[13px] font-bold uppercase tracking-[0.06em] text-ink">
-        {t("contact.labels.requisites")}
-      </div>
-      <div className="mt-3 text-[14px] leading-[1.8] text-ink-medium">
-        {t("contact.labels.bin")} {REQUISITES.bin}
-        <br />
-        {t("contact.labels.iik")} {REQUISITES.iik}
-        <br />
-        {t("contact.labels.bik")} {REQUISITES.bik}
-        <br />
-        {t("contact.labels.bank")}: {REQUISITES.bank}
-      </div>
-    </div>
-  );
-
   return (
     <>
       <PageHero
@@ -86,18 +70,18 @@ export function ContactsPage() {
       />
 
       <Section>
-        {SHOW_CONTACT_FORM ? (
+        {showContactForm ? (
           <div className="grid gap-8 lg:grid-cols-2 lg:items-start lg:gap-12">
             <div className="flex flex-col gap-8">
               {contactsCard}
-              {requisitesCard}
+              <RequisitesBlock />
             </div>
             <ContactForm />
           </div>
         ) : (
           <div className="grid gap-8 lg:grid-cols-2 lg:items-stretch lg:gap-8">
             {contactsCard}
-            {requisitesCard}
+            <RequisitesBlock />
           </div>
         )}
       </Section>

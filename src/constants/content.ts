@@ -81,17 +81,6 @@ export const SERVICE_CARD_ICONS = [
 ] as const;
 
 /** Услуги. Заголовок и описание — в i18n (services.items[]). Здесь только число направлений. */
-export const SERVICE_KEYS = [
-  "representation",
-  "authorization",
-  "assessment",
-  "certificates",
-  "labs",
-  "consulting",
-  "storage",
-] as const;
-
-/** Карточки-направления для страницы услуг (из «структура сайта»). */
 export const SERVICE_CARD_KEYS = [
   "authorized",
   "certification",
@@ -101,53 +90,31 @@ export const SERVICE_CARD_KEYS = [
   "marking",
 ] as const;
 
-/** Партнёры по странам. Названия компаний — имена собственные (не переводятся). */
-export const PARTNER_GROUPS = [
-  {
-    countryKey: "partners.countries.usa",
-    items: [
-      "Wabtec Components LLC",
-      "Eaton Corporation",
-      "Cardwell Westinghouse",
-    ],
-  },
-  {
-    countryKey: "partners.countries.eu",
-    items: [
-      "ŠKODA ELECTRIC a.s.",
-      "BONATRANS GROUP a.s.",
-      "Wabtec Faiveley Nordic AB",
-    ],
-  },
-  {
-    countryKey: "partners.countries.canada",
-    items: ["PRELCO INC", "Beclawat Manufacturing Inc."],
-  },
-  {
-    countryKey: "partners.countries.kz",
-    items: [
-      "Филиал компании «Транспортейшн Глоубэл Эл-Эл-Си»",
-      "ТОО «Транспортейшн Казахстан»",
-      "ТОО «Казахстанский центр сертификации на железнодорожном транспорте»",
-      "ТОО «Казэкспоаудит»",
-      "ТОО «ТЕКС»",
-      "ТОО «ҒЗО Алматы-Стандарт»",
-      "ОЮЛ «Казахстанская ассоциация органов по оценке соответствия»",
-    ],
-  },
+/** Партнёры (имена собственные, не переводятся). */
+export const PARTNERS = [
+  "Wabtec Components LLC",
+  "Eaton Corporation",
+  "Cardwell Westinghouse",
+  "ŠKODA ELECTRIC a.s.",
+  "BONATRANS GROUP a.s.",
+  "Wabtec Faiveley Nordic AB",
+  "PRELCO INC",
+  "Beclawat Manufacturing Inc.",
+  "Филиал компании «Транспортейшн Глоубэл Эл-Эл-Си»",
+  "ТОО «Транспортейшн Казахстан»",
+  "ТОО «Казахстанский центр сертификации на железнодорожном транспорте»",
+  "ТОО «Казэкспоаудит»",
+  "ТОО «ТЕКС»",
+  "ТОО «ҒЗО Алматы-Стандарт»",
+  "ОЮЛ «Казахстанская ассоциация органов по оценке соответствия»",
 ] as const;
-
-/** Все партнёры одним списком (без группировки по странам). */
-export const PARTNERS = PARTNER_GROUPS.flatMap((group) => group.items);
 
 /**
  * Логотипы партнёров для карусели. Ключ — точное название из PARTNERS,
  * значение — URL/импорт картинки (SVG/PNG, прозрачный фон).
- * Пока пусто — карусель показывает плейсхолдер с инициалами.
+ * Партнёры без логотипа не попадают в карусель (см. PartnerCarousel).
  * Чтобы добавить логотип: положить файл в `src/assets/partners/`,
  * импортировать сверху и прописать здесь (ключ — точное название из PARTNERS).
- * Для остальных компаний логотипы не найдены в открытом доступе —
- * карусель показывает плейсхолдер с инициалами.
  */
 export const PARTNER_LOGOS: Record<string, string> = {
   "Wabtec Components LLC": wabtecLogo,

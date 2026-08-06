@@ -54,13 +54,17 @@ export function Header() {
           scrolled ? "py-3 lg:py-3" : "py-4 lg:py-[18px]",
         )}
       >
-        <Link to="/" onClick={closeMenu} className="flex items-center gap-3.5">
+        <Link
+          to="/"
+          onClick={closeMenu}
+          className="flex min-w-0 max-w-[calc(100%-3rem)] items-center gap-3 sm:gap-3.5 lg:max-w-none"
+        >
           <img
             src={logo}
             alt={SITE.shortName}
-            className="h-10 w-10 object-contain lg:h-[42px] lg:w-[42px]"
+            className="h-10 w-10 shrink-0 object-contain sm:h-11 sm:w-11 lg:h-11 lg:w-11 xl:h-12 xl:w-12"
           />
-          <span className="text-[15px] font-extrabold leading-[1.25] tracking-[0.02em] text-ink">
+          <span className="min-w-0 text-base font-extrabold leading-[1.2] tracking-tight text-ink sm:text-lg md:text-xl lg:text-xl xl:text-2xl xl:leading-[1.1] 2xl:text-[28px]">
             {t("site.brand")}
           </span>
         </Link>
@@ -88,7 +92,7 @@ export function Header() {
           type="button"
           className="inline-flex h-10 w-10 items-center justify-center rounded-[2px] border border-line text-xl text-ink lg:hidden"
           aria-expanded={menuOpen}
-          aria-label="Menu"
+          aria-label={menuOpen ? t("nav.menuClose") : t("nav.menuOpen")}
           onClick={() => setMenuOpen((open) => !open)}
         >
           {menuOpen ? "×" : "☰"}
@@ -119,7 +123,7 @@ export function Header() {
           <button
             type="button"
             className="inline-flex h-9 w-9 items-center justify-center rounded-[2px] border border-line text-xl text-ink"
-            aria-label="Close menu"
+            aria-label={t("nav.menuClose")}
             onClick={closeMenu}
           >
             ×

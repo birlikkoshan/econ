@@ -1,6 +1,5 @@
 {
   "site": {
-    "name": "Eurasian Consulting Consortium LLP",
     "brand": "Eurasian Consulting Consortium LLP",
     "address": "010000, Republic of Kazakhstan, Astana, Mangilik El 45-104",
     "addressShort": "Astana, Mangilik El 45-104",
@@ -8,10 +7,7 @@
     "directorShort": "Tapalova K. T."
   },
   "common": {
-    "cta": "Request a consultation",
-    "contactUs": "Contact us",
     "allServices": "All services →",
-    "ourServices": "Our services",
     "readMore": "Learn more"
   },
   "nav": {
@@ -20,7 +16,9 @@
     "services": "Services",
     "legislation": "Legislation",
     "partners": "Partners",
-    "contact": "Contacts"
+    "contact": "Contacts",
+    "menuOpen": "Menu",
+    "menuClose": "Close menu"
   },
   "home": {
     "eyebrow": "Republic of Kazakhstan · EAEU",
@@ -28,20 +26,12 @@
     "lead": "We represent the interests of foreign manufacturers before government authorities and conformity assessment bodies. We support conformity confirmation of products with the EAEU technical regulations — from consultation to full project management.",
     "primaryCta": "Our services",
     "secondaryCta": "Contact us",
-    "badges": {
-      "since": "on the market",
-      "assessment": "conformity assessment",
-      "marking": "marking",
-      "claims": "claims"
-    },
     "stats": {
       "experience": "years of experience",
       "projects": "completed projects",
       "industries": "industries",
       "clients": "clients",
       "since": "on the market since",
-      "claims": "claims in our entire history",
-      "countries": "partner countries",
       "eaeu": "EAEU member states"
     },
     "about": {
@@ -96,35 +86,7 @@
       ]
     },
     "geo": {
-      "eyebrow": "Geography",
       "title": "Our partners"
-    },
-    "faq": {
-      "eyebrow": "Q&A",
-      "title": "Frequently asked questions",
-      "items": [
-        {
-          "q": "Who is an authorised representative of the manufacturer?",
-          "a": "It is an entity registered in the EAEU that represents the interests of a foreign manufacturer before government authorities and conformity assessment bodies and is responsible for the product's compliance with EAEU technical regulations."
-        },
-        {
-          "q": "Which countries do you work with?",
-          "a": "We hold long-term contracts with manufacturers and conformity assessment bodies from the USA, the European Union, Canada and the Republic of Kazakhstan."
-        },
-        {
-          "q": "How long does conformity confirmation take?",
-          "a": "The timeline depends on the type of product, the applicable technical regulations and the chosen scheme. We provide exact timing after reviewing the task during the initial consultation."
-        },
-        {
-          "q": "What documents are needed to get started?",
-          "a": "To begin, the technical documentation for the product and details about the manufacturer are sufficient. We compile the full list individually after the consultation."
-        }
-      ]
-    },
-    "cta": {
-      "title": "Let's work together",
-      "text": "If you are a foreign manufacturer, supplier or importer of products, we are ready to become your reliable representative in the Republic of Kazakhstan and the EAEU.",
-      "button": "Request a consultation"
     }
   },
   "about": {
@@ -147,9 +109,7 @@
       "Advisory and methodological support in setting up laboratories and conformity assessment bodies, with subsequent support during accreditation.",
       "Advisory and methodological support in confirming product conformity with national legislation and the Eurasian Economic Union requirements.",
       "Trade and economic activities."
-    ],
-    "recordTitle": "An impeccable reputation",
-    "record": "Over the years, Eurasian Consulting Consortium LLP has served both Kazakhstani and foreign companies at a high professional level without receiving a single complaint. The company currently maintains long-term contracts with a number of companies listed in the \"Partners\" section."
+    ]
   },
   "services": {
     "eyebrow": "What we do",
@@ -239,6 +199,8 @@
     ],
     "adiletNote": "Current versions of the laws are available in the Information and Legal System of Regulatory Legal Acts of the Republic of Kazakhstan.",
     "adiletLink": "Go to adilet.zan.kz",
+    "adiletDomain": "adilet.zan.kz",
+    "eaeuEyebrow": "EAEU",
     "eaeuTitle": "Law of the Eurasian Economic Union",
     "eaeuLead": "Alongside national legislation, the following apply:",
     "eaeuItems": [
@@ -253,13 +215,7 @@
   "partners": {
     "eyebrow": "Partners",
     "title": "Our partners",
-    "lead": "Eurasian Consulting Consortium LLP maintains long-term contracts with manufacturers and conformity assessment bodies in the USA, the European Union, Canada and the Republic of Kazakhstan.",
-    "countries": {
-      "usa": "USA",
-      "eu": "European Union",
-      "canada": "Canada",
-      "kz": "Kazakhstan"
-    }
+    "lead": "Eurasian Consulting Consortium LLP maintains long-term contracts with manufacturers and conformity assessment bodies in the USA, the European Union, Canada and the Republic of Kazakhstan."
   },
   "contact": {
     "eyebrow": "Contacts",
@@ -294,9 +250,9 @@
       "submitting": "Sending…",
       "success": "Thank you! Your request has been sent — we will contact you shortly.",
       "submitErrors": {
-        "default": "Could not send your request. Please try again later or e-mail econ2007kz@gmail.com.",
-        "mail_not_configured": "The form is temporarily unavailable. Please e-mail econ2007kz@gmail.com.",
-        "send_failed": "Could not send your request. Please try again later or e-mail econ2007kz@gmail.com."
+        "default": "Could not send your request. Please try again later or e-mail {{email}}.",
+        "mail_not_configured": "The form is temporarily unavailable. Please e-mail {{email}}.",
+        "send_failed": "Could not send your request. Please try again later or e-mail {{email}}."
       },
       "errors": {
         "nameRequired": "Please enter your name",

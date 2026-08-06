@@ -1,6 +1,5 @@
 {
   "site": {
-    "name": "«Eūraziyalyq konsaltingtık konsortsiūm» JŞS",
     "brand": "«Eūraziyalyq konsaltingtık konsortsiūm» JŞS",
     "address": "010000, Qazaqstan Respūblikasy, Astana q., Mäñgılık El 45-104",
     "addressShort": "Astana, Mäñgılık El 45-104",
@@ -8,10 +7,7 @@
     "directorShort": "Tapalova Q. T."
   },
   "common": {
-    "cta": "Ötınım qaldyrū",
-    "contactUs": "Bızben bailanysū",
     "allServices": "Barlyq qyzmetter →",
-    "ourServices": "Kompaniya qyzmetterı",
     "readMore": "Tolyğyraq"
   },
   "nav": {
@@ -20,7 +16,9 @@
     "services": "Qyzmetter",
     "legislation": "Zañnama",
     "partners": "Serıktester",
-    "contact": "Bailanys"
+    "contact": "Bailanys",
+    "menuOpen": "Mäzır",
+    "menuClose": "Mäzırdı jabū"
   },
   "home": {
     "eyebrow": "Qazaqstan Respūblikasy · EAEO",
@@ -28,20 +26,12 @@
     "lead": "Şeteldık öndırūşılerdıñ müddesın memlekettık organdar men säikestıktı bağalaū organdary aldynda bıldıremız. Önımnıñ EAEO tehnikalyq reglamentterı talaptaryna säikestıgın rastaūdy keñes berūden jobany tolyq jürgızūge deiın süiemeldeimız.",
     "primaryCta": "Kompaniya qyzmetterı",
     "secondaryCta": "Bızben bailanysū",
-    "badges": {
-      "since": "naryqta jyl",
-      "assessment": "säikestıktı bağalaū",
-      "marking": "tañbalaū",
-      "claims": "narazylyq"
-    },
     "stats": {
       "experience": "jyl täjıribe",
       "projects": "oryndalğan joba",
       "industries": "sala",
       "clients": "klient",
       "since": "naryqta jyldan berı",
-      "claims": "bükıl tarihta narazylyq",
-      "countries": "serıktes el",
       "eaeu": "EAEO memleketı"
     },
     "about": {
@@ -96,35 +86,7 @@
       ]
     },
     "geo": {
-      "eyebrow": "Geografiya",
       "title": "Bızdıñ serıktester"
-    },
-    "faq": {
-      "eyebrow": "Suraqtar men jaūaptar",
-      "title": "Jiı qoiylatyn suraqtar",
-      "items": [
-        {
-          "q": "Daiyndaūşy ūäkılettık bergen tulğa degen kım?",
-          "a": "Bul — şeteldık daiyndaūşynyñ müddesın memlekettık organdar men säikestıktı bağalaū organdary aldynda bıldıretın jäne önımnıñ EAEO TR talaptaryna säikestıgıne jaūap beretın EAEO-da tırkelgen tulğa."
-        },
-        {
-          "q": "Qai eldermen jumys ısteisızder?",
-          "a": "Bızde AQŞ, Eūropalyq odaq, Kanada jäne Qazaqstan Respūblikasynyñ öndırūşılerımen ärı säikestıktı bağalaū organdarymen uzaq merzımdı kelısımşarttar bar."
-        },
-        {
-          "q": "Säikestıktı rastaū qanşa ūaqyt alady?",
-          "a": "Merzım önım türıne, qoldanylatyn tehnikalyq reglamentterge jäne tañdalğan shemağa bailanysty. Naqty merzımdı alğaşqy keñes berū kezınde mındettı taldaūdan keiın aitamyz."
-        },
-        {
-          "q": "Bastaū üşın qandai qujattar qajet?",
-          "a": "Bastapqyda önımge arnalğan tehnikalyq qujattama men daiyndaūşy tūraly mälımetter jetkılıktı. Tolyq tızımdı keñesten keiın jeke qalyptastyramyz."
-        }
-      ]
-    },
-    "cta": {
-      "title": "Yntymaqtastyqqa şaqyramyz",
-      "text": "Eger sız şeteldık daiyndaūşy, jetkızūşı nemese önım importtaūşysy bolsañyz — Qazaqstan Respūblikasy men EAEO aūmağynda senımdı ökılıñız bolūğa daiynbyz.",
-      "button": "Ötınım qaldyrū"
     }
   },
   "about": {
@@ -147,9 +109,7 @@
       "Zerthanalar men säikestıktı rastaū organdaryn qurū kezınde keñes berū-ädıstemelık kömek, keiınnen akkreditteū kezınde süiemeldeū.",
       "Önımnıñ ulttyq zañnama men Eūraziyalyq ekonomikalyq odaq talaptaryna säikestıgın rastaū kezınde keñes berū-ädıstemelık kömek.",
       "Saūda-ekonomikalyq qyzmet."
-    ],
-    "recordTitle": "Mınsız bedel",
-    "record": "Qyzmet etken kezeñde «Eūraziyalyq konsaltingtık konsortsiūm» JŞS qazaqstandyq ta, şeteldık te kompaniyalarğa joğary käsıbi deñgeide qyzmet körsetıp, bırde-bır narazylyq almağan. Qazırgı ūaqytta kompaniya «Serıktester» bölımınde körsetılgen bırqatar kompaniyamen uzaq merzımdı kelısımşarttarğa ie."
+    ]
   },
   "services": {
     "eyebrow": "Bız ne ısteimız",
@@ -239,6 +199,8 @@
     ],
     "adiletNote": "Zañdardyñ özektı nusqalaryn Qazaqstan Respūblikasynyñ normativtık quqyqtyq aktılerınıñ aqparattyq-quqyqtyq jüiesınen taba alasyz.",
     "adiletLink": "adilet.zan.kz saityna ötū",
+    "adiletDomain": "adilet.zan.kz",
+    "eaeuEyebrow": "EAEO",
     "eaeuTitle": "Eūraziyalyq ekonomikalyq odaq quqyğy",
     "eaeuLead": "Ulttyq zañnamamen qatar mynalar qoldanylady:",
     "eaeuItems": [
@@ -253,13 +215,7 @@
   "partners": {
     "eyebrow": "Serıktester",
     "title": "Bızdıñ serıktester",
-    "lead": "«Eūraziyalyq konsaltingtık konsortsiūm» JŞS AQŞ, Eūropalyq odaq, Kanada jäne Qazaqstan Respūblikasyndağy öndırūşılermen jäne säikestıktı bağalaū organdarymen uzaq merzımdı kelısımşarttarğa ie.",
-    "countries": {
-      "usa": "AQŞ",
-      "eu": "Eūropalyq odaq",
-      "canada": "Kanada",
-      "kz": "Qazaqstan"
-    }
+    "lead": "«Eūraziyalyq konsaltingtık konsortsiūm» JŞS AQŞ, Eūropalyq odaq, Kanada jäne Qazaqstan Respūblikasyndağy öndırūşılermen jäne säikestıktı bağalaū organdarymen uzaq merzımdı kelısımşarttarğa ie."
   },
   "contact": {
     "eyebrow": "Bailanys",
@@ -294,9 +250,9 @@
       "submitting": "Jıberılude…",
       "success": "Raqmet! Ötınım jıberıldı — bız sızben jaqyn arada bailanysamyz.",
       "submitErrors": {
-        "default": "Ötınım jıberılmedı. Keiınırek qaýtalap körıñız nemese econ2007kz@gmail.com poştasyna jazyñyz.",
-        "mail_not_configured": "Forma uaqytsha qoljetimsiz. Bızge econ2007kz@gmail.com poştasyna jazyñyz.",
-        "send_failed": "Ötınım jıberılmedı. Keiınırek qaýtalap körıñız nemese econ2007kz@gmail.com poštasyna jazyñyz."
+        "default": "Ötınım jıberılmedı. Keiınırek qaýtalap körıñız nemese {{email}} poştasyna jazyñyz.",
+        "mail_not_configured": "Forma uaqytsha qoljetimsiz. Bızge {{email}} poştasyna jazyñyz.",
+        "send_failed": "Ötınım jıberılmedı. Keiınırek qaýtalap körıñız nemese {{email}} poštasyna jazyñyz."
       },
       "errors": {
         "nameRequired": "Atyñyzdy körsetıñız",

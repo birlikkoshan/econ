@@ -3,10 +3,12 @@
   переводятся и берутся из i18n (ключи site.*), т.к. юридическая форма и написание
   отличаются по языкам (ТОО / ЖШС / LLP).
 */
+import { CONTACT_EMAIL } from "../../shared/constants";
+
 export const SITE = {
   shortName: "ECON",
   url: "https://eccllp.vercel.app",
-  email: "econ2007kz@gmail.com",
+  email: CONTACT_EMAIL,
   phone: "+7 701 588 53 03",
   phoneHref: "+77015885303",
   foundedYear: 2007,

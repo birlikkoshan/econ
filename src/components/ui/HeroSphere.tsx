@@ -9,7 +9,7 @@ type HeroSphereProps = {
 /** Изумруд бренда (~#2D6A4F) и оттенки для объёмного шейдинга. */
 const BRAND = { r: 45, g: 106, b: 79 };
 const BRAND_LIGHT = { r: 64, g: 145, b: 108 };
-const BRAND_DEEP = { r: 32, g: 78, b: 58 };
+const BRAND_DEEP = { r: 22, g: 58, b: 42 };
 
 type Vec3 = { x: number; y: number; z: number };
 
@@ -100,18 +100,21 @@ export function HeroSphere({ className }: HeroSphereProps) {
 
       ctx.clearRect(0, 0, width, height);
 
+      const glowRadius = radius * 1.12;
       const glow = ctx.createRadialGradient(
         cx,
         cy,
         radius * 0.15,
         cx,
         cy,
-        radius * 1.35,
+        glowRadius,
       );
-      glow.addColorStop(0, `rgba(${BRAND.r}, ${BRAND.g}, ${BRAND.b}, 0.14)`);
+      glow.addColorStop(0, `rgba(${BRAND.r}, ${BRAND.g}, ${BRAND.b}, 0.28)`);
       glow.addColorStop(1, `rgba(${BRAND.r}, ${BRAND.g}, ${BRAND.b}, 0)`);
+      ctx.beginPath();
+      ctx.arc(cx, cy, glowRadius, 0, Math.PI * 2);
       ctx.fillStyle = glow;
-      ctx.fillRect(0, 0, width, height);
+      ctx.fill();
 
       const bodyGrad = ctx.createRadialGradient(
         cx - radius * 0.32,
@@ -123,15 +126,15 @@ export function HeroSphere({ className }: HeroSphereProps) {
       );
       bodyGrad.addColorStop(
         0,
-        `rgba(${BRAND_LIGHT.r}, ${BRAND_LIGHT.g}, ${BRAND_LIGHT.b}, 0.58)`,
+        `rgba(${BRAND_LIGHT.r}, ${BRAND_LIGHT.g}, ${BRAND_LIGHT.b}, 0.76)`,
       );
       bodyGrad.addColorStop(
         0.5,
-        `rgba(${BRAND.r}, ${BRAND.g}, ${BRAND.b}, 0.44)`,
+        `rgba(${BRAND.r}, ${BRAND.g}, ${BRAND.b}, 0.58)`,
       );
       bodyGrad.addColorStop(
         1,
-        `rgba(${BRAND_DEEP.r}, ${BRAND_DEEP.g}, ${BRAND_DEEP.b}, 0.3)`,
+        `rgba(${BRAND_DEEP.r}, ${BRAND_DEEP.g}, ${BRAND_DEEP.b}, 0.30)`,
       );
 
       ctx.beginPath();
@@ -147,7 +150,7 @@ export function HeroSphere({ className }: HeroSphereProps) {
         cy - radius * 0.28,
         radius * 0.52,
       );
-      specular.addColorStop(0, "rgba(255, 255, 255, 0.38)");
+      specular.addColorStop(0, "rgba(255, 255, 255, 0.55)");
       specular.addColorStop(1, "rgba(255, 255, 255, 0)");
       ctx.beginPath();
       ctx.arc(cx, cy, radius, 0, Math.PI * 2);
@@ -173,8 +176,8 @@ export function HeroSphere({ className }: HeroSphereProps) {
 
         drawCurve(
           points,
-          "rgba(255, 255, 255, 0.24)",
-          1,
+          "rgba(255, 255, 255, 0.52)",
+          1.5,
           backCutoff,
         );
       }
@@ -194,16 +197,16 @@ export function HeroSphere({ className }: HeroSphereProps) {
 
         drawCurve(
           points,
-          `rgba(${BRAND_LIGHT.r}, ${BRAND_LIGHT.g}, ${BRAND_LIGHT.b}, 0.28)`,
-          1,
+          `rgba(${BRAND_LIGHT.r}, ${BRAND_LIGHT.g}, ${BRAND_LIGHT.b}, 0.58)`,
+          1.5,
           backCutoff,
         );
       }
 
       ctx.beginPath();
       ctx.arc(cx, cy, radius, 0, Math.PI * 2);
-      ctx.strokeStyle = `rgba(${BRAND_LIGHT.r}, ${BRAND_LIGHT.g}, ${BRAND_LIGHT.b}, 0.4)`;
-      ctx.lineWidth = 1.5;
+      ctx.strokeStyle = `rgba(${BRAND_LIGHT.r}, ${BRAND_LIGHT.g}, ${BRAND_LIGHT.b}, 0.75)`;
+      ctx.lineWidth = 2.5;
       ctx.stroke();
 
       if (!reducedMotion) {
@@ -234,7 +237,7 @@ export function HeroSphere({ className }: HeroSphereProps) {
     >
       <canvas
         ref={canvasRef}
-        className="aspect-square w-full max-w-[min(100%,560px)]"
+        className="aspect-square w-full max-w-[min(100%,560px)] rounded-full"
         aria-hidden="true"
       />
     </div>

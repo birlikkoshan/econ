@@ -69,7 +69,7 @@ export function LegislationPage() {
                   className="ml-1 inline-flex items-center gap-1 font-semibold text-brand-deep underline-offset-2 hover:underline"
                 >
                   <Icon name="link" className="h-3.5 w-3.5" />
-                  adilet.zan.kz
+                  {t("legislation.adiletDomain")}
                 </a>
               </p>
             </Reveal>
@@ -90,7 +90,7 @@ export function LegislationPage() {
       </Section>
 
       <Section tint bordered>
-        <Eyebrow>{t("legislation.eyebrow")}</Eyebrow>
+        <Eyebrow>{t("legislation.eaeuEyebrow")}</Eyebrow>
         <h2 className="mt-3 text-2xl font-extrabold text-ink sm:text-[28px]">
           {t("legislation.eaeuTitle")}
         </h2>

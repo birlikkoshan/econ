@@ -19,6 +19,7 @@ import {
   STATS,
   WHY_ICONS,
 } from "@/constants/content";
+import { CARD_BORDER_HOVER } from "@/lib/utils";
 
 /** Разбирает «2007» / «18+» / «с 2007» на префикс, число и суффикс для анимированного счётчика. */
 function parseStat(value: string) {
@@ -145,7 +146,7 @@ export function HomePage() {
                 <Reveal
                   key={item}
                   delay={index * 90}
-                  className={`group flex flex-col gap-4 border-2 border-brand/50 bg-surface p-7 transition-all hover:-translate-y-0.5 hover:border-brand hover:bg-brand-tint hover:shadow-[0_8px_24px_-12px_rgba(0,0,0,0.18)] ${
+                  className={`group flex flex-col gap-4 border-2 border-brand/50 bg-surface p-7 ${CARD_BORDER_HOVER} ${
                     index === why.length - 1 && why.length % 2 !== 0
                       ? "sm:col-span-2"
                       : ""
@@ -190,7 +191,7 @@ export function HomePage() {
             <Reveal
               key={item}
               delay={index * 50}
-              className="group flex items-start gap-4 border-2 border-brand/50 bg-white p-5 transition-all hover:-translate-y-0.5 hover:border-brand hover:bg-brand-tint hover:shadow-[0_8px_24px_-12px_rgba(0,0,0,0.18)]"
+              className={`group flex items-start gap-4 border-2 border-brand/50 bg-white p-5 ${CARD_BORDER_HOVER}`}
             >
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[3px] bg-brand-tint text-brand transition-colors group-hover:bg-brand group-hover:text-white">
                 <Icon
@@ -217,7 +218,7 @@ export function HomePage() {
             <Reveal
               key={step.title}
               delay={index * 80}
-              className="group relative flex flex-col gap-4 border-2 border-brand/50 bg-surface p-7 transition-all hover:-translate-y-0.5 hover:border-brand hover:bg-brand-tint hover:shadow-[0_8px_24px_-12px_rgba(0,0,0,0.18)]"
+              className={`group relative flex flex-col gap-4 border-2 border-brand/50 bg-surface p-7 ${CARD_BORDER_HOVER}`}
             >
               <div className="flex items-center justify-between">
                 <span className="flex h-11 w-11 items-center justify-center rounded-[3px] bg-brand/10 text-brand transition-colors group-hover:bg-brand group-hover:text-white">
@@ -247,21 +248,6 @@ export function HomePage() {
           <PartnerCarousel items={PARTNERS} />
         </Reveal>
       </Section>
-
-      {/* Частые вопросы — аккордеон */}
-      {/*<Section>
-        <div className="mx-auto max-w-3xl">
-          <Reveal className="mb-8">
-            <Eyebrow>{t("home.faq.eyebrow")}</Eyebrow>
-            <h2 className="mt-3 text-2xl font-extrabold tracking-tight text-ink sm:text-[28px]">
-              {t("home.faq.title")}
-            </h2>
-          </Reveal>
-          <Reveal>
-            <Accordion items={faq} />
-          </Reveal>
-        </div>
-      </Section>*/}
     </>
   );
 }
