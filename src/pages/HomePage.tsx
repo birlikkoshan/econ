@@ -47,6 +47,7 @@ export function HomePage() {
       {/* Hero */}
       <Section className="overflow-hidden bg-surface lg:py-[54px]">
         <div className="relative flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-between lg:gap-14">
+          <HeroSphere className="absolute -right-16 top-8 z-0 w-[min(118vw,520px)] opacity-[0.11] sm:-right-6 sm:top-2 sm:w-[min(88vw,600px)] lg:hidden" />
           <div className="animate-fade-in-up w-full max-w-[54ch] lg:max-w-[64ch] lg:flex-[1.1] *:relative *:z-10">
             <Eyebrow>{t("home.eyebrow")}</Eyebrow>
             <h1 className="mt-4 text-3xl font-extrabold leading-[1.1] tracking-tight text-ink sm:text-4xl lg:text-[42px] lg:max-w-none">
@@ -69,11 +70,11 @@ export function HomePage() {
             </div>
           </div>
           <div
-            className="animate-fade-in-up pointer-events-none absolute right-0 top-[30%] z-0 -mr-5 -translate-y-1/2 opacity-[0.58] sm:-mr-8 lg:relative lg:right-auto lg:top-auto lg:z-auto lg:mr-0 lg:flex lg:shrink-0 lg:translate-y-0 lg:justify-end lg:opacity-100"
+            className="animate-fade-in-up pointer-events-none relative z-0 hidden lg:flex lg:shrink-0 lg:justify-end lg:opacity-100"
             style={{ animationDelay: "0.12s" }}
           >
-            <div className="relative w-[min(36vw,140px)] overflow-hidden sm:w-[min(40vw,150px)] lg:w-[min(40vw,480px)] lg:overflow-visible xl:w-[520px]">
-              <HeroSphere className="max-w-none w-[min(72vw,280px)] sm:w-[min(70vw,300px)] lg:w-full" />
+            <div className="relative lg:w-[min(40vw,480px)] xl:w-[520px]">
+              <HeroSphere className="w-full" />
             </div>
           </div>
         </div>
