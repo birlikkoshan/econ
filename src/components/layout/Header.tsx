@@ -69,7 +69,7 @@ export function Header() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-6 lg:flex">
+        <nav className="hidden items-center gap-5 lg:flex xl:gap-6">
           {NAV_ITEMS.map((item) => (
             <NavLink
               key={item.id}
@@ -77,7 +77,7 @@ export function Header() {
               end={item.path === "/"}
               className={({ isActive }) =>
                 cn(
-                  "text-sm font-medium transition-colors hover:text-brand",
+                  "whitespace-nowrap text-sm font-medium transition-colors hover:text-brand",
                   isActive ? "text-brand" : "text-ink-soft",
                 )
               }
